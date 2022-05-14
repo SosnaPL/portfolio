@@ -1,3 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+::-webkit-scrollbar {
+  width: 17px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+html {
+  background: #161515;
+}
+
+body {
+  background: #161515;
+  color: #fff;
+  box-sizing: border-box;
+  text-shadow: 2px 2px #000;
+}
+
+.app_container {
+  height: 100vh;
+}
+
+.suspense {
+  position: absolute;
+  left: calc(50% - 100px);
+  top: calc(50% - 100px);
+}
+
+section {
+  min-height: 100vh;
+  padding: 5rem 2.5rem;
+}

@@ -1,4 +1,6 @@
 declare module '*.mp3'
 declare module '*.img'
+declare module '*.jpg'
 declare module '*.gif'
 declare module '*.png'
+declare module '*.json'

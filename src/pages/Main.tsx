@@ -1,7 +1,11 @@
-import React from 'react'
+import Introduction from '../components/Introduction/introduction'
 
 export const Main = () => {
-  return <div className="main">Template</div>
+  return (
+    <div className="main">
+      <Introduction />
+    </div>
+  )
 }
 
 export default Main

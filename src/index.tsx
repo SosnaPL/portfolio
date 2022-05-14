@@ -1,6 +1,5 @@
-import React from 'react'
 import ReactDOM from 'react-dom'
-import Main from './App'
+import App from './App'
 import './global.css'
 
-ReactDOM.render(<Main />, document.getElementById('app_container'))
+ReactDOM.render(<App />, document.getElementById('app_container'))
