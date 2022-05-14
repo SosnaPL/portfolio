@@ -10,9 +10,11 @@ export const App = () => {
   return (
     <>
       <Helmet>
-        <meta charSet="utf-8" name="keywords" content="Template" />
-        <title>Template</title>
-        <meta name="description" content="Template" />
+        <title>Sosna.dev</title>
+        <meta
+          name="description"
+          content="Most of the projects that you will find on this website are my simple public applications/websites that I've made in the past or I'm still working on. More informations about my private projects will be added in the future."
+        />
       </Helmet>
       <Navbar />
       <Router>

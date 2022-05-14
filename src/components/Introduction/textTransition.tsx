@@ -13,8 +13,10 @@ export const TransitioningText = () => {
 
   return (
     <div className="flex flex-col gap-2 justify-center">
-      <span className="text-left text-gray-500 font-semibold text-lg">WELCOME TO MY WORLD</span>
-      <h1 className="flex flex-col gap-2 text-2xl sm:text-5xl md:text-7xl font-black">
+      <span className="text-left text-gray-500 font-semibold text-sm sm:text-lg">
+        WELCOME TO MY WORLD
+      </span>
+      <h1 className="flex flex-col gap-1 text-4xl sm:gap-2 sm:text-5xl md:text-7xl font-black">
         Hi, I'm Jacob
         <TextTransition
           className="text-blue-800"

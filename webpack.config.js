@@ -28,12 +28,12 @@ module.exports = {
         use: ["style-loader", "css-loader", "postcss-loader", "sass-loader"],
       },
       {
-        test: /\.(png|jpg|gif)$/i,
+        test: /\.(woff|woff2|eot|ttf)$/,
         use: [
           {
             loader: 'url-loader',
             options: {
-              limit: 8192,
+              limit: 100000,
             }
           }
         ]
