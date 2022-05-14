@@ -1,0 +1,20 @@
+a::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: #008bff;
+  bottom: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.active-scroll-spy::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #008bff;
+  bottom: 0;
+}
