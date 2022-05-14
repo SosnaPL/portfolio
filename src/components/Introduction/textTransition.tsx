@@ -19,7 +19,7 @@ export const TransitioningText = () => {
       <h1 className="flex flex-col gap-1 text-4xl sm:gap-2 sm:text-5xl md:text-7xl font-black">
         Hi, I'm Jacob
         <TextTransition
-          className="text-blue-800"
+          className="text-blue-600"
           text={TEXTS[index % TEXTS.length]}
           springConfig={presets.gentle}
         />

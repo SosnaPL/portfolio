@@ -9,7 +9,7 @@ export const Main = () => {
       <ScrollSpy scrollThrottle={100} useBoxMethod={false} offsetBottom={-200} offsetTop={-200}>
         <section
           id="home"
-          className="flex align-center relative bg-right bg-contain bg-no-repeat"
+          className="flex align-center relative bg-right 2xl:bg-center bg-contain bg-no-repeat"
           style={{ backgroundImage: `url(${Me})` }}
         >
           <Introduction />
