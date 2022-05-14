@@ -1,6 +1,6 @@
 import Particles from 'react-tsparticles'
 import { loadFull } from 'tsparticles'
-import ParticlesOptions from './config.json'
+import ParticlesOptions from '../../public/particles.json'
 
 export const ParticlesRenderer = () => {
   const particlesInit = async (main) => {
@@ -10,7 +10,7 @@ export const ParticlesRenderer = () => {
   return (
     <Particles
       id="tsparticles"
-      style={{ position: 'absolute', top: 0, left: 0 }}
+      style={{ position: 'absolute', top: 0, left: 0, zIndex: 10 }}
       options={ParticlesOptions as any}
       init={particlesInit}
     />

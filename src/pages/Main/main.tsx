@@ -1,6 +1,5 @@
-import Introduction from '../components/Introduction/introduction'
-import { About } from './../components/About/about'
-import Me from '../public/me.png'
+import Introduction from '../../components/Introduction/introduction'
+import { About } from '../../components/About/about'
 import ScrollSpy from 'react-ui-scrollspy'
 
 export const Main = () => {
@@ -9,8 +8,7 @@ export const Main = () => {
       <ScrollSpy scrollThrottle={100} useBoxMethod={false} offsetBottom={-200} offsetTop={-200}>
         <section
           id="home"
-          className="flex align-center relative bg-right 2xl:bg-center bg-contain bg-no-repeat"
-          style={{ backgroundImage: `url(${Me})` }}
+          className="flex items-center relative bg-right 2xl:bg-center bg-contain bg-no-repeat"
         >
           <Introduction />
         </section>

@@ -2,9 +2,10 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 import Navbar from './components/Navbar/navbar'
-import Logo from './components/Loader/logo'
+import LottieWrapper from './components/lottieWrapper'
+import Loader from './public/loader.json'
 
-const Main = React.lazy(() => import('./pages/Main'))
+const Main = React.lazy(() => import('./pages/Main/main'))
 
 export const App = () => {
   return (
@@ -21,7 +22,7 @@ export const App = () => {
         <React.Suspense
           fallback={
             <div className="suspense">
-              <Logo />
+              <LottieWrapper lottie={Loader} className={'h-52 w-52'} />
             </div>
           }
         >

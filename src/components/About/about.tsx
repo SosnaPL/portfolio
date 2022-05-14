@@ -1,7 +1,7 @@
 import './style.scss'
 
 export const About = () => {
-  return <div>asd</div>
+  return <div></div>
 }
 
 export default About
