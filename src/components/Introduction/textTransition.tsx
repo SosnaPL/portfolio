@@ -1,7 +1,6 @@
 import TextTransition, { presets } from 'react-text-transition'
 import { useEffect, useState } from 'react'
-
-const TEXTS = ['Web Developer', 'Designer', 'Content Writer']
+import { jobPositions } from '../constants'
 
 export const TransitioningText = () => {
   const [index, setIndex] = useState(0)
@@ -20,7 +19,7 @@ export const TransitioningText = () => {
         Hi, I'm Jacob
         <TextTransition
           className="text-blue-600"
-          text={TEXTS[index % TEXTS.length]}
+          text={jobPositions[index % jobPositions.length]}
           springConfig={presets.gentle}
         />
       </h1>
