@@ -3,9 +3,11 @@ import { useEffect, useState } from 'react'
 import { jobPositions } from '../constants'
 import LottieWrapper from './../lottieWrapper'
 import Github from '../../public/github.json'
+import LinkedIn from '../../public/linkedin.json'
 
 export const Description = () => {
   const [index, setIndex] = useState(0)
+  const socialIconClass = 'h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20'
 
   useEffect(() => {
     const intervalId = setInterval(() => setIndex((index) => index + 1), 1800)
@@ -18,15 +20,20 @@ export const Description = () => {
         WELCOME TO MY WORLD
       </span>
       <h1 className="flex flex-col gap-1 text-4xl sm:gap-2 sm:text-5xl md:text-7xl font-black">
-        Hi, I'm Jacob
+        <span className="z-10">Hi, I'm Jacob</span>
         <TextTransition
           className="text-blue-500"
           text={jobPositions[index % jobPositions.length]}
           springConfig={presets.gentle}
         />
       </h1>
-      <div className="flex items-center pt-16 gap-2">
-        <LottieWrapper lottie={Github} className="h-20 w-20" />
+      <div className="flex items-center pt-6 sm:pt-8 md:pt-10 gap-2 sm:gap-5">
+        <a href="https://github.com/SosnaPL" target="_blank">
+          <LottieWrapper lottie={Github} className={socialIconClass} />
+        </a>
+        <a href="https://www.linkedin.com/in/jakub-sosi%C5%84ski-954a7a19b/" target="_blank">
+          <LottieWrapper lottie={LinkedIn} className={socialIconClass} />
+        </a>
       </div>
     </div>
   )
