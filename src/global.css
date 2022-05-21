@@ -44,3 +44,9 @@ section {
   min-height: 100vh;
   padding: 5rem 2.5rem;
 }
+
+@media (max-width: 640px) {
+  section {
+    padding: 4.2rem 1.5rem;
+  }
+}

@@ -10,7 +10,7 @@ const LottieWrapper = ({ lottie, className }: LottieWrapperProps) => {
     animationData: lottie,
     loop: true,
     autoplay: true,
-    className: className ? className : ''
+    className: className
   }
 
   const { View } = useLottie(options as any)

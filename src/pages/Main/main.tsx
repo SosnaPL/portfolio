@@ -5,11 +5,11 @@ import ScrollSpy from 'react-ui-scrollspy'
 export const Main = () => {
   return (
     <div className="main">
-      <ScrollSpy scrollThrottle={100} useBoxMethod={false} offsetBottom={0} offsetTop={0}>
-        <section id="home" className="flex items-center relative">
+      <ScrollSpy scrollThrottle={100} useBoxMethod={false} offsetBottom={200}>
+        <section id="home" className="flex relative">
           <Introduction />
         </section>
-        <section id="about">
+        <section id="about" className="bg-neutral-900 transition-all delay-300">
           <About />
         </section>
       </ScrollSpy>

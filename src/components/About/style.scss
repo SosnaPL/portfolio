@@ -1,1 +1,33 @@
+h2 {
+  position: relative;
+  padding-bottom: 8px;
+  cursor: pointer;
+}
 
+h2::after {
+  content: '';
+  width: 0;
+  height: 4px;
+  transition: all 0.4s ease-in-out;
+}
+
+.skills {
+  max-height: 2000px;
+}
+
+.education {
+  max-height: 1000px;
+}
+
+.current_tab::after {
+  content: '';
+  width: 40px;
+  height: 4px;
+  background: #0a6f88;
+}
+
+/* @media (max-width: 640px) {
+  .content_container {
+    min-height: 360px;
+  }
+} */
