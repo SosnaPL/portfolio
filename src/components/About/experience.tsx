@@ -26,8 +26,8 @@ export const Experience = () => {
           <div className="flex flex-col gap-2">
             <span className="text-sky-400 font-bold">UX/UI</span>
             <span className="pl-4">
-              I'm a visual, cross-platform programmer and I'm really comfortable with writing
-              production-quality application with multiple
+              I am a visual, cross-platform developer and am very comfortable writing
+              production-quality applications using multiple
               <span className="text-sky-400 cursor-pointer"> technologies</span>.
             </span>
           </div>
