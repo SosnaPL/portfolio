@@ -18,8 +18,8 @@ export const Experience = () => {
           <div className="flex flex-col gap-2">
             <span className="text-sky-400 font-bold">Web Development</span>
             <span className="pl-4">
-              I create effective responsive websites that are fast, easy to use and built using best
-              practices. My main area of specialization is front-end development, i.e. creating
+              I create effective responsive websites that are fast, easy to use and build, using
+              best practices. My main area of specialization is front-end development, i.e. creating
               small and medium-sized web applications.
             </span>
           </div>
@@ -36,7 +36,7 @@ export const Experience = () => {
             <span className="pl-4">
               I like to go with the flow of the industry I work in, and staying up to date with
               promising technologies is my motto. I also love sharing my knowledge with other people
-              by posting articles on
+              by publishing articles on
               <span className="text-sky-400 cursor-pointer"> medium</span>.
             </span>
           </div>
