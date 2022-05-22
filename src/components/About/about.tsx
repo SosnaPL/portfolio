@@ -15,8 +15,8 @@ export const About = () => {
         </div>
         <div className="flex justify-center">
           <span className="flex justify-center items-center font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl text-center lg:text-left">
-            Programmer who loves the concept of blockchain and web3, eager for knowledge. I also
-            like cats, but that's another matter ;)
+            Software Developer who loves the concept of blockchain and web3, eager for knowledge. I
+            also like cats, but that's another matter ;)
           </span>
         </div>
       </div>
