@@ -18,26 +18,26 @@ export const Experience = () => {
           <div className="flex flex-col gap-2">
             <span className="text-sky-400 font-bold">Web Development</span>
             <span className="p-0 sm:pl-4">
-              I create effective responsive websites that are fast, easy to use, built using best
-              practices. My main area of specialization is front-end development, i.e. creating
-              small and medium-sized web applications.
+              I design responsive websites that are fast, simple to use, and constructed according
+              to best practices. My main area of specialization is front-end development, i.e.
+              creating small and medium-sized web applications using different
+              <span className="text-sky-400 cursor-pointer"> technologies</span>.
             </span>
           </div>
           <div className="flex flex-col gap-2">
             <span className="text-sky-400 font-bold">UX/UI</span>
             <span className="p-0 sm:pl-4">
-              I am a visual, cross-platform developer and am very comfortable writing
-              production-quality applications using multiple
-              <span className="text-sky-400 cursor-pointer"> technologies</span>.
+              I work to improve user satisfaction, reduce user churn, and guarantee that user-based
+              organizational goals are met.
             </span>
           </div>
           <div className="flex flex-col gap-2">
             <span className="text-sky-400 font-bold">Content Writing</span>
             <span className="p-0 sm:pl-4">
-              I like to go with the flow of the industry. Staying up to date with promising
-              technologies is my motto. I also love sharing my knowledge with other people by
-              publishing articles on
-              <span className="text-sky-400 cursor-pointer"> medium</span>.
+              I prefer to follow the industry's lead. My mission is to keep up with emerging
+              technologies. I also enjoy posting articles on
+              <span className="text-sky-400 cursor-pointer"> medium </span>to share my knowledge
+              with others.
             </span>
           </div>
         </>
