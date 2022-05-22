@@ -9,7 +9,7 @@ export const Introduction = () => {
     <>
       <ParticlesRenderer />
       <Description />
-      <LottieWrapper lottie={Coding} className={'absolute w-fit bottom-0 right-0'} />
+      <LottieWrapper lottie={Coding} className={'absolute w-fit bottom-0 right-0 z-10'} />
     </>
   )
 }

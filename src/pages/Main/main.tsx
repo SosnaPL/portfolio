@@ -9,7 +9,7 @@ export const Main = () => {
         <section id="home" className="flex relative">
           <Introduction />
         </section>
-        <section id="about" className="bg-neutral-900 transition-all delay-300">
+        <section id="about" className="bg-neutral-900">
           <About />
         </section>
       </ScrollSpy>
