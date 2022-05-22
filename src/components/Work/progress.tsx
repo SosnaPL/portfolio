@@ -30,7 +30,7 @@ export const Progress = ({ title }) => {
                 value={percentage}
                 background={false}
                 styles={buildStyles({
-                  pathTransitionDuration: 1.5,
+                  pathTransitionDuration: visible ? 1.5 : 0,
                   pathColor: '#008bff',
                   trailColor: 'transparent'
                 })}
