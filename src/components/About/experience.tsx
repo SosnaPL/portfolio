@@ -17,7 +17,7 @@ export const Experience = () => {
         <>
           <div className="flex flex-col gap-2">
             <span className="text-sky-400 font-bold">Web Development</span>
-            <span className="pl-4">
+            <span className="p-0 sm:pl-4">
               I create effective responsive websites that are fast, easy to use, built using best
               practices. My main area of specialization is front-end development, i.e. creating
               small and medium-sized web applications.
@@ -25,7 +25,7 @@ export const Experience = () => {
           </div>
           <div className="flex flex-col gap-2">
             <span className="text-sky-400 font-bold">UX/UI</span>
-            <span className="pl-4">
+            <span className="p-0 sm:pl-4">
               I am a visual, cross-platform developer and am very comfortable writing
               production-quality applications using multiple
               <span className="text-sky-400 cursor-pointer"> technologies</span>.
@@ -33,7 +33,7 @@ export const Experience = () => {
           </div>
           <div className="flex flex-col gap-2">
             <span className="text-sky-400 font-bold">Content Writing</span>
-            <span className="pl-4">
+            <span className="p-0 sm:pl-4">
               I like to go with the flow of the industry I work in, and staying up to date with
               promising technologies is my motto. I also love sharing my knowledge with other people
               by publishing articles on
