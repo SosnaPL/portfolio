@@ -11,14 +11,6 @@ h2::after {
   transition: all 0.4s ease-in-out;
 }
 
-.skills {
-  max-height: 2000px;
-}
-
-.education {
-  max-height: 1000px;
-}
-
 .current_tab::after {
   content: '';
   width: 40px;

@@ -34,9 +34,9 @@ export const Experience = () => {
           <div className="flex flex-col gap-2">
             <span className="text-sky-400 font-bold">Content Writing</span>
             <span className="p-0 sm:pl-4">
-              I like to go with the flow of the industry I work in, and staying up to date with
-              promising technologies is my motto. I also love sharing my knowledge with other people
-              by publishing articles on
+              I like to go with the flow of the industry. Staying up to date with promising
+              technologies is my motto. I also love sharing my knowledge with other people by
+              publishing articles on
               <span className="text-sky-400 cursor-pointer"> medium</span>.
             </span>
           </div>
@@ -84,11 +84,11 @@ export const Experience = () => {
           Education & Certificates
         </h2>
       </div>
-      <div className="content_container bg-neutral-800 rounded-2xl p-4 sm:p-6">
+      <div className="bg-neutral-800 rounded-2xl p-4 sm:p-6">
         <AnimatePresence exitBeforeEnter>
           <motion.div
             key={view}
-            className="content flex flex-col gap-3 text-base sm:text-lg md:text-xl lg:text-2xl text-center sm:text-left"
+            className="flex flex-col gap-3 text-base sm:text-lg md:text-xl lg:text-2xl text-center sm:text-left"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
