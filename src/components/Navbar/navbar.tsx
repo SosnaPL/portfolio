@@ -14,9 +14,10 @@ export const Navbar = () => {
 
   return (
     <div
-      className={`fixed justify-center px-5 md:px-10 py-5 w-full z-30 bg-neutral-900 bg-opacity-0 transition-all duration-200 ${
+      className={`fixed justify-center px-5 md:px-10 py-5 w-full bg-neutral-900 bg-opacity-0 transition-all duration-200 ${
         posY > 50 && 'bg-opacity-100'
       } `}
+      style={{ zIndex: 100 }}
     >
       <div className="flex text-neutral-300 text-base md:text-2xl font-bold gap-4">
         {navigationElements.map((ele, key) => {
