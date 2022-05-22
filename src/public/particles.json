@@ -74,7 +74,7 @@
     "detect_on": "canvas",
     "events": {
       "onhover": {
-        "enable": true,
+        "enable": false,
         "mode": "repulse"
       },
       "onclick": {
@@ -98,8 +98,8 @@
         "speed": 3
       },
       "repulse": {
-        "distance": 97.44926547616141,
-        "duration": 0.4
+        "distance": 200,
+        "duration": 0.2
       },
       "push": {
         "particles_nb": 4

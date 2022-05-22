@@ -16,24 +16,23 @@ export const Description = () => {
   }, [])
 
   return (
-    <div className="flex flex-col gap-2 justify-center w-full">
+    <div className="flex flex-col gap-2 justify-center w-full z-20">
       <span className="text-left text-gray-500 font-extrabold text-sm sm:text-lg">
         WELCOME TO MY WORLD
       </span>
-      <h1 className="flex flex-col gap-1 text-4xl sm:gap-2 sm:text-5xl md:text-7xl font-black">
-        <span className="z-30">Hi, I'm Jacob</span>
+      <h1 className="flex flex-col gap-1 text-4xl sm:gap-2 sm:text-5xl md:text-7xl font-black z-50">
+        <span className="z-10">Hi, I'm Jacob</span>
         <TextTransition
-          className="text-blue-500 z-20"
+          className="text-blue-500 w-full"
           text={jobPositions[index % jobPositions.length]}
           springConfig={presets.gentle}
         />
       </h1>
       <div className="flex items-center pt-6 sm:pt-8 md:pt-10 gap-2 sm:gap-5">
-        <a className="z-50" aria-label="Github" href="https://github.com/SosnaDev" target="_blank">
+        <a aria-label="Github" href="https://github.com/SosnaDev" target="_blank">
           <LottieWrapper lottie={Github} className={socialIconClass} />
         </a>
         <a
-          className="z-50"
           aria-label="LinkedIn"
           href="https://www.linkedin.com/in/jakub-sosi%C5%84ski-954a7a19b/"
           target="_blank"
