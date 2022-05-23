@@ -10,9 +10,7 @@ export const Main = () => {
     const hash = window.location.hash
     Object.values(navigationElements).map((obj) => {
       if (Object.values(obj).includes(hash.split('#')[1])) {
-        document.querySelector(hash).scrollIntoView({
-          behavior: 'smooth'
-        })
+        document.querySelector(hash).scrollIntoView()
       }
     })
   }, [])
