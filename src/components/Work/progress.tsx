@@ -1,7 +1,8 @@
+import { useState } from 'react'
+
 import { useCountUp } from 'react-countup'
 import { CircularProgressbarWithChildren, buildStyles } from 'react-circular-progressbar'
 import VisibilitySensor from 'react-visibility-sensor'
-import { useState, useEffect } from 'react'
 
 export const Progress = ({ title }) => {
   const [ended, setEnded] = useState(false)
@@ -16,7 +17,7 @@ export const Progress = ({ title }) => {
   })
 
   return (
-    <div className="flex flex-col items-center gap-2 w-1/4">
+    <div className="flex flex-col items-center gap-2 w-1/2 sm:w-1/4">
       <VisibilitySensor partialVisibility={true} active={!ended}>
         {({ isVisible }) => {
           const visible = !ended ? isVisible : true
@@ -25,18 +26,18 @@ export const Progress = ({ title }) => {
             start()
           }
           return (
-            <div className="w-12 sm:w-20 lg:w-40">
+            <div className="w-24 lg:w-40">
               <CircularProgressbarWithChildren
                 value={percentage}
                 background={false}
                 styles={buildStyles({
                   pathTransitionDuration: visible ? 1.5 : 0,
-                  pathColor: '#008bff',
+                  pathColor: '#41829e',
                   trailColor: 'transparent'
                 })}
               >
                 <div className="text-lg sm:text-2xl lg:text-4xl font-semibold text-white">
-                  <span id={title}></span>
+                  ~<span id={title}></span>
                 </div>
               </CircularProgressbarWithChildren>
             </div>

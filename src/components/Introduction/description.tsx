@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+
 import { jobPositions } from '../constants'
 import LottieWrapper from './../lottieWrapper'
 import Github from '../../public/github.json'

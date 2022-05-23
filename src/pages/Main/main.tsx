@@ -24,7 +24,7 @@ export const Main = () => {
         <section id="about" className="bg-neutral-900">
           <About />
         </section>
-        <section id="work">
+        <section id="work" className="flex flex-col">
           <Work />
         </section>
       </ScrollSpy>

@@ -1,4 +1,5 @@
 import './style.scss'
+
 import LottieWrapper from './../lottieWrapper'
 import Profile from '../../public/profile.json'
 import Experience from './experience'

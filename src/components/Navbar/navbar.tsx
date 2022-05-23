@@ -1,7 +1,8 @@
+import './style.scss'
 import { useEffect, useState } from 'react'
+
 import { NavbarElement } from './navElement'
 import { navigationElements } from '../constants'
-import './style.scss'
 
 export const Navbar = () => {
   const [posY, setPosY] = useState(0)

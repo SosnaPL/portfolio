@@ -1,6 +1,6 @@
 import GitHubCalendar from 'react-github-calendar'
 
-export const GithubCalendar = () => {
+export const GithubCalendar = ({ username }: { username: string }) => {
   const selectLastHalfYear = (contributions) => {
     const startMonth = 3 // April
     const currentYear = new Date().getFullYear()
@@ -11,12 +11,25 @@ export const GithubCalendar = () => {
     })
   }
 
+  const Theme = {
+    level0: 'rgb(38,38,38)',
+    level1: 'hsla(207, 100%, 50%, 0.44)',
+    level2: 'hsla(207, 100%, 50%, 0.6)',
+    level3: 'hsla(207, 100%, 50%, 0.76)',
+    level4: 'hsla(207, 100%, 50%, 0.92)'
+  }
+
   return (
     <GitHubCalendar
-      username="SosnaDev"
-      transformData={selectLastHalfYear}
-      hideTotalCount
-      hideColorLegend
+      username={username}
+      fontSize={14}
+      showWeekdayLabels={false}
+      theme={Theme}
+      /* transformData={selectLastHalfYear} */
+      blockSize={15}
+      /*       hideTotalCount
+      hideColorLegend */
+      /*       color="#008bff" */
     />
   )
 }

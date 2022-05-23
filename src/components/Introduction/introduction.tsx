@@ -1,4 +1,5 @@
 import './style.scss'
+
 import { ParticlesRenderer } from './../Particles/particles'
 import { Description } from './description'
 import LottieWrapper from '../lottieWrapper'
