@@ -18,7 +18,7 @@ export const Description = () => {
 
   return (
     <div className="flex flex-col gap-2 justify-center w-full z-20">
-      <span className="text-left text-gray-500 font-extrabold text-sm sm:text-lg">
+      <span className="text-left text-gray-400 font-extrabold text-sm sm:text-lg">
         WELCOME TO MY WORLD
       </span>
       <h1 className="flex flex-col gap-1 text-4xl sm:gap-2 sm:text-5xl md:text-7xl font-black z-50">
