@@ -22,7 +22,7 @@ export const GithubCalendar = ({ username }: { username: string }) => {
   return (
     <GitHubCalendar
       username={username}
-      fontSize={14}
+      fontSize={12}
       showWeekdayLabels={false}
       theme={Theme}
       /* transformData={selectLastHalfYear} */
