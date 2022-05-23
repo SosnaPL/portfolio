@@ -2,8 +2,21 @@ import Introduction from '../../components/Introduction/introduction'
 import { About } from '../../components/About/about'
 import { Work } from '../../components/Work/work'
 import ScrollSpy from 'react-ui-scrollspy'
+import { useEffect } from 'react'
+import { navigationElements } from '../../components/constants'
 
 export const Main = () => {
+  useEffect(() => {
+    const hash = window.location.hash
+    Object.values(navigationElements).map((obj) => {
+      if (Object.values(obj).includes(hash.split('#')[1])) {
+        document.querySelector(hash).scrollIntoView({
+          behavior: 'smooth'
+        })
+      }
+    })
+  }, [])
+
   return (
     <div className="main">
       <ScrollSpy scrollThrottle={100} useBoxMethod={false} offsetBottom={200}>

@@ -17,7 +17,6 @@ export const App = () => {
           content="I create effective responsive websites that are fast, easy to use, built using best practices. My main area of specialization is front-end development, i.e. creating small and medium-sized web applications."
         />
       </Helmet>
-      <Navbar />
       <Router>
         <React.Suspense
           fallback={
@@ -26,6 +25,7 @@ export const App = () => {
             </div>
           }
         >
+          <Navbar />
           <Routes>
             <Route path="/" element={<Main />} />
             <Route path="*" element={<Main />} />
