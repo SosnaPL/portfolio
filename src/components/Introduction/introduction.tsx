@@ -1,9 +1,10 @@
 import './style.scss'
+import React from 'react'
 
 import { ParticlesRenderer } from './../Particles/particles'
 import { Description } from './description'
-import LottieWrapper from '../lottieWrapper'
 import Coding from '../../public/coding.json'
+const LottieWrapper = React.lazy(() => import('../lottieWrapper'))
 
 export const Introduction = () => {
   return (

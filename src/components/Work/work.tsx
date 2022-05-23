@@ -1,8 +1,11 @@
+import React from 'react'
 import './style.scss'
 
 import { Progress } from './progress'
-import { Technologies } from './technologies'
-import { GithubCalendar } from './githubCalendar'
+const Technologies = React.lazy(() => import('./technologies'))
+const GithubCalendar = React.lazy(() => import('./githubCalendar'))
+
+import VisibilitySensor from 'react-visibility-sensor'
 
 const progressDetails = ['Performance', 'Accessibility', 'Best Practices', 'SEO']
 
@@ -17,25 +20,31 @@ export const Work = () => {
           return <Progress key={key} title={title} />
         })}
       </div>
-      <div className="flex flex-col xl:flex-row gap-y-6 justify-center items-center flex-grow">
-        <div className="flex flex-col items-center justify-between gap-10 w-full xl:w-1/2">
-          <div className="flex flex-col w-full justify-center items-center gap-5">
-            <span className="text-neutral-300 flex text-2xl sm:text-3xl md:text-4xl font-black">
-              Commercial
-            </span>
-            <GithubCalendar username="SosnaDev" />
-          </div>
-          <div className="flex flex-col w-full justify-center items-center gap-5">
-            <span className="text-neutral-300 flex text-2xl sm:text-3xl md:text-4xl font-black">
-              Private
-            </span>
-            <GithubCalendar username="SosnaPL" />
-          </div>
-        </div>
-        <div className="technologies flex relative w-full md:w-1/2 justify-center items-center">
-          <Technologies />
-        </div>
-      </div>
+      <VisibilitySensor partialVisibility={true}>
+        {({ isVisible }) => {
+          return (
+            <div className="flex flex-col xl:flex-row gap-y-6 justify-center items-center flex-grow">
+              <div className="flex flex-col items-center justify-between gap-10 w-full xl:w-1/2">
+                <div className="flex flex-col w-full justify-center items-center gap-5">
+                  <span className="text-neutral-300 flex text-2xl sm:text-3xl md:text-4xl font-black">
+                    Commercial
+                  </span>
+                  <GithubCalendar username="SosnaDev" />
+                </div>
+                <div className="flex flex-col w-full justify-center items-center gap-5">
+                  <span className="text-neutral-300 flex text-2xl sm:text-3xl md:text-4xl font-black">
+                    Private
+                  </span>
+                  <GithubCalendar username="SosnaPL" />
+                </div>
+              </div>
+              <div className="technologies flex relative w-full md:w-1/2 justify-center items-center">
+                <Technologies isVisible={isVisible} />
+              </div>
+            </div>
+          )
+        }}
+      </VisibilitySensor>
     </div>
   )
 }

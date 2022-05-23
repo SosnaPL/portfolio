@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import { jobPositions } from '../constants'
-import LottieWrapper from './../lottieWrapper'
 import Github from '../../public/github.json'
 import LinkedIn from '../../public/linkedin.json'
+const LottieWrapper = React.lazy(() => import('./../lottieWrapper'))
 
 import TextTransition, { presets } from 'react-text-transition'
 
