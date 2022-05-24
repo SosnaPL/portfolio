@@ -4,7 +4,7 @@ import React from 'react'
 import { ParticlesRenderer } from './../Particles/particles'
 import { Description } from './description'
 import Coding from '../../public/coding.json'
-const LottieWrapper = React.lazy(() => import('../lottieWrapper'))
+import LottieWrapper from '../lottieWrapper'
 
 export const Introduction = () => {
   return (

@@ -13,7 +13,11 @@ const LottieWrapper = ({ lottie, className }: LottieWrapperProps) => {
     className: className
   }
 
-  const { View } = useLottie(options as any)
+  const { View, play, pause } = useLottie(options as any)
+
+  document.addEventListener('visibilitychange', () => {
+    document.visibilityState == 'hidden' ? pause() : play()
+  })
 
   return View
 }

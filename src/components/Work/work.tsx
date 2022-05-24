@@ -2,8 +2,8 @@ import React from 'react'
 import './style.scss'
 
 import { Progress } from './progress'
-const Technologies = React.lazy(() => import('./technologies'))
-const GithubCalendar = React.lazy(() => import('./githubCalendar'))
+import Technologies from './technologies'
+import GithubCalendar from './githubCalendar'
 
 import VisibilitySensor from 'react-visibility-sensor'
 
