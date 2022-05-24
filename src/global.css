@@ -21,6 +21,7 @@
 
 html {
   background: #080808;
+  overflow-x: hidden;
 }
 
 body {
@@ -28,6 +29,7 @@ body {
   color: #fff;
   box-sizing: border-box;
   text-shadow: 2px 2px #000;
+  overflow-x: hidden;
 }
 
 .app_container {
