@@ -8,6 +8,12 @@ import GithubCalendar from './githubCalendar'
 import VisibilitySensor from 'react-visibility-sensor'
 
 const progressDetails = ['Performance', 'Accessibility', 'Best Practices', 'SEO']
+const progressColors = [
+  'hsla(207, 100%, 50%, 0.92)',
+  'hsla(207, 100%, 50%, 0.76)',
+  'hsla(207, 100%, 50%, 0.6)',
+  'hsla(207, 100%, 50%, 0.44)'
+]
 
 export const Work = () => {
   return (
@@ -17,7 +23,7 @@ export const Work = () => {
       </h1>
       <div className="flex flex-wrap sm:flex-nowrap gap-y-6 gap-x-0 sm:gap-x-10 sm:gap-y-0 justify-center">
         {progressDetails.map((title, key) => {
-          return <Progress key={key} title={title} />
+          return <Progress key={key} title={title} color={'hsla(207, 100%, 50%, 0.6)'} />
         })}
       </div>
       <VisibilitySensor partialVisibility={true}>

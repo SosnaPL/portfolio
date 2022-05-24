@@ -4,7 +4,7 @@ import { useCountUp } from 'react-countup'
 import { CircularProgressbarWithChildren, buildStyles } from 'react-circular-progressbar'
 import VisibilitySensor from 'react-visibility-sensor'
 
-export const Progress = ({ title }) => {
+export const Progress = ({ title, color }) => {
   const [ended, setEnded] = useState(false)
 
   const { start } = useCountUp({
@@ -32,7 +32,7 @@ export const Progress = ({ title }) => {
                 background={false}
                 styles={buildStyles({
                   pathTransitionDuration: visible ? 1.5 : 0,
-                  pathColor: '#41829e',
+                  pathColor: color,
                   trailColor: 'transparent'
                 })}
               >
