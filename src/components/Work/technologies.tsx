@@ -13,15 +13,20 @@ export const Technologies = ({ isVisible }: { isVisible: boolean }) => {
 
   const container = '.tagcloud'
   const texts = [
-    'React',
+    'ReactJS',
     'Svelte',
+    'SolidJS',
+    'React Native',
     'TypeScript',
-    'JavaScript',
+    'ES5/ES6+',
+    'Git',
     'CSS3',
-    'HTML',
+    'SASS',
     'Bootstrap',
     'Tailwind',
-    'GIMP 2'
+    'HTML',
+    'GIMP 2',
+    'VSCode'
   ]
   const options = {
     radius: 200,
