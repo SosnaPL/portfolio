@@ -27,6 +27,7 @@ export const Experience = () => {
                 className="text-sky-400 cursor-pointer"
                 onClick={smoothScroll.bind(null, 'work')}
               >
+                {' '}
                 technologies
               </span>
               .
