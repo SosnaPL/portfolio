@@ -1,4 +1,4 @@
-import { Progress } from './progress'
+import ProgressCircle from './progressCircle'
 import Technologies from './technologies'
 import GithubCalendar from './githubCalendar'
 
@@ -20,7 +20,7 @@ export const Work = () => {
       </h1>
       <div className="flex flex-wrap sm:flex-nowrap gap-y-6 gap-x-0 sm:gap-x-10 sm:gap-y-0 justify-center">
         {progressDetails.map((title, key) => {
-          return <Progress key={key} title={title} color={'hsla(207, 100%, 50%, 0.6)'} />
+          return <ProgressCircle key={key} title={title} color={'hsla(207, 100%, 50%, 0.6)'} />
         })}
       </div>
       <VisibilitySensor partialVisibility={true}>

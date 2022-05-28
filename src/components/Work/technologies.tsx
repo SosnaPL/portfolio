@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 
+import { skills } from '../constants'
+
 const TagCloud = require('TagCloud')
 
 export const Technologies = ({ isVisible }: { isVisible: boolean }) => {
@@ -11,22 +13,7 @@ export const Technologies = ({ isVisible }: { isVisible: boolean }) => {
   }
 
   const container = '.tagcloud'
-  const texts = [
-    'ReactJS',
-    'Svelte',
-    'SolidJS',
-    'React Native',
-    'TypeScript',
-    'ES5/ES6+',
-    'Git',
-    'CSS3',
-    'SASS',
-    'Bootstrap',
-    'Tailwind',
-    'HTML',
-    'GIMP 2',
-    'VSCode'
-  ]
+
   const options = {
     radius: 200,
     maxSpeed: 'fast',
@@ -36,7 +23,7 @@ export const Technologies = ({ isVisible }: { isVisible: boolean }) => {
   }
 
   useEffect(() => {
-    const cloud = TagCloud(container, texts, options)
+    const cloud = TagCloud(container, skills, options)
     cloud.pause()
     setTc(cloud)
     const tagItems = document.querySelectorAll('.tagcloud--item')

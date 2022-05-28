@@ -16,3 +16,20 @@ export const navigationElements: NavbarElementProps[] = [
     name: 'Work'
   }
 ]
+
+export const skills: string[] = [
+  'ReactJS',
+  'Svelte',
+  'SolidJS',
+  'React Native',
+  'TypeScript',
+  'ES5/ES6+',
+  'Git',
+  'CSS3',
+  'SASS',
+  'Bootstrap',
+  'Tailwind',
+  'HTML',
+  'GIMP 2',
+  'VSCode'
+]

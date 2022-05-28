@@ -4,7 +4,7 @@ import { useCountUp } from 'react-countup'
 import { CircularProgressbarWithChildren, buildStyles } from 'react-circular-progressbar'
 import VisibilitySensor from 'react-visibility-sensor'
 
-export const Progress = ({ title, color }) => {
+export const ProgressCircle = ({ title, color }) => {
   const [ended, setEnded] = useState(false)
 
   const { start } = useCountUp({
@@ -53,4 +53,4 @@ export const Progress = ({ title, color }) => {
   )
 }
 
-export default Progress
+export default ProgressCircle
