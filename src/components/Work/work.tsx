@@ -1,6 +1,3 @@
-import React from 'react'
-import './style.scss'
-
 import { Progress } from './progress'
 import Technologies from './technologies'
 import GithubCalendar from './githubCalendar'

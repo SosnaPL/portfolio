@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import './style.scss'
 
 const TagCloud = require('TagCloud')
 

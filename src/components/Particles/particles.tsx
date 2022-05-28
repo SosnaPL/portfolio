@@ -1,6 +1,7 @@
+import ParticlesOptions from '../../public/particles.json'
+
 import Particles from 'react-tsparticles'
 import { loadFull } from 'tsparticles'
-import ParticlesOptions from '../../public/particles.json'
 
 export const ParticlesRenderer = () => {
   const particlesInit = async (main) => {

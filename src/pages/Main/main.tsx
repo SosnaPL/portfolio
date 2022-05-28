@@ -1,9 +1,11 @@
+import { useEffect } from 'react'
+
 import Introduction from '../../components/Introduction/introduction'
 import { About } from '../../components/About/about'
 import { Work } from '../../components/Work/work'
-import ScrollSpy from 'react-ui-scrollspy'
-import { useEffect } from 'react'
 import { navigationElements } from '../../components/constants'
+
+import ScrollSpy from 'react-ui-scrollspy'
 
 export const Main = () => {
   useEffect(() => {
