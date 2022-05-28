@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 
 import { useLottie } from 'lottie-react'
 
-interface LottieWrapperProps {
+export interface LottieWrapperProps {
   lottie: any
   className?: string
 }
