@@ -1,8 +1,8 @@
 import './style.scss'
 import { useEffect, useState } from 'react'
 
-import { NavbarElement } from './navElement'
-import { navigationElements } from '../constants'
+import { NavbarElement } from 'components/Navbar/navElement'
+import { navigationElements } from 'components/constants'
 
 export const Navbar = () => {
   const [posY, setPosY] = useState(0)
@@ -21,8 +21,8 @@ export const Navbar = () => {
       style={{ zIndex: 100 }}
     >
       <div className="flex text-neutral-300 text-base md:text-2xl font-bold gap-4">
-        {navigationElements.map((ele, key) => {
-          return <NavbarElement key={key} id={ele.id} name={ele.name} />
+        {navigationElements.map((navelement, key) => {
+          return <NavbarElement key={key} {...navelement} />
         })}
       </div>
     </div>

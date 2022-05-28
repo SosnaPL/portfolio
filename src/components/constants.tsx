@@ -1,7 +1,7 @@
-import { NavbarElementProps } from './Navbar/navElement'
-import { IconProps } from './Icon'
-import Github from '../public/github.json'
-import LinkedIn from '../public/linkedin.json'
+import { NavbarElementProps } from 'components/Navbar/navElement'
+import { IconProps } from 'components/Icon'
+import Github from 'public/github.json'
+import LinkedIn from 'public/linkedin.json'
 
 export const jobPositions: string[] = ['Web Developer', 'Designer', 'Content Writer']
 

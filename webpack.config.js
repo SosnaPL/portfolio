@@ -8,13 +8,14 @@ module.exports = {
     index: "./src/index.tsx"
   },
   output: {
-    filename: "[name]-[hash:8].bundle.js",
-    chunkFilename: "[name]-[hash:8].chunk.js",
+    filename: "[name]-[fullhash:8].bundle.js",
+    chunkFilename: "[name]-[chunkhash:8].chunk.js",
     path: path.resolve(__dirname, "dist"),
     publicPath: "/",
   },
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".jsx"]
+    extensions: [".ts", ".tsx", ".js", ".jsx"],
+    modules: [path.resolve(__dirname, "src"), "node_modules"]
   },
   module: {
     rules: [

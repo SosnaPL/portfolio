@@ -1,6 +1,8 @@
 import './style.scss'
 import { useState } from 'react'
 
+import smoothScroll from 'components/smoothScroll'
+
 import { motion, AnimatePresence } from 'framer-motion'
 
 enum Pages {
@@ -21,7 +23,14 @@ export const Experience = () => {
               I design responsive websites that are fast, simple to use, and constructed according
               to best practices. My main area of specialization is front-end development, i.e.
               creating small and medium-sized web applications using different
-              <span className="text-sky-400 cursor-pointer"> technologies</span>.
+              <span
+                className="text-sky-400 cursor-pointer"
+                onClick={smoothScroll.bind(null, 'work')}
+              >
+                {' '}
+                technologies
+              </span>
+              .
             </span>
           </div>
           <div className="flex flex-col gap-2">
@@ -68,7 +77,7 @@ export const Experience = () => {
     <div className="flex flex-col gap-5 text-neutral-300">
       <div className="flex justify-center md:justify-start text-white font-semibold gap-4 text-base sm:text-2xl ">
         <h2
-          className={`flex flex-col justify-center hover:text-gray-500 duration-150 sm:justify-start ${
+          className={`experience-tab flex flex-col justify-center hover:text-gray-500 duration-150 sm:justify-start ${
             view == Pages.SKILLS && 'current_tab '
           }`}
           onClick={() => setView(Pages.SKILLS)}
@@ -76,7 +85,7 @@ export const Experience = () => {
           Main Skills
         </h2>
         <h2
-          className={`flex flex-col justify-centerhover:text-gray-500 duration-150 sm:justify-start ${
+          className={`experience-tab flex flex-col justify-centerhover:text-gray-500 duration-150 sm:justify-start ${
             view == Pages.EDUCATION && 'current_tab'
           }`}
           onClick={() => setView(Pages.EDUCATION)}

@@ -1,8 +1,8 @@
 import './style.scss'
 
-import LottieWrapper from './../lottieWrapper'
-import Profile from '../../public/profile.json'
-import Experience from './experience'
+import LottieWrapper from 'components/lottieWrapper'
+import Experience from 'components/About/experience'
+import Profile from 'public/profile.json'
 
 export const About = () => {
   return (

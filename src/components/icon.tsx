@@ -1,5 +1,5 @@
-import LottieWrapper from './lottieWrapper'
-import { LottieWrapperProps } from './lottieWrapper'
+import LottieWrapper from 'components/lottieWrapper'
+import { LottieWrapperProps } from 'components/lottieWrapper'
 
 export interface IconProps extends LottieWrapperProps {
   name: string

@@ -1,4 +1,4 @@
-import ParticlesOptions from '../../public/particles.json'
+import ParticlesOptions from 'public/particles.json'
 
 import Particles from 'react-tsparticles'
 import { loadFull } from 'tsparticles'

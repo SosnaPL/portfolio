@@ -1,4 +1,4 @@
-a::after {
+span.nav-item::after {
   position: absolute;
   content: '';
   left: 0;
@@ -6,10 +6,10 @@ a::after {
   height: 4px;
   background: #008bff;
   bottom: 0;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
-.active-scroll-spy::after {
+span.active-scroll-spy::after {
   position: absolute;
   content: '';
   left: 0;
