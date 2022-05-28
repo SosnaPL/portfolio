@@ -85,7 +85,7 @@ export const Experience = () => {
           Main Skills
         </h2>
         <h2
-          className={`experience-tab flex flex-col justify-centerhover:text-gray-500 duration-150 sm:justify-start ${
+          className={`experience-tab flex flex-col justify-center hover:text-gray-500 duration-150 sm:justify-start ${
             view == Pages.EDUCATION && 'current_tab'
           }`}
           onClick={() => setView(Pages.EDUCATION)}
