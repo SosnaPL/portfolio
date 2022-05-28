@@ -1,5 +1,5 @@
 import { NavbarElementProps } from 'components/Navbar/navElement'
-import { IconProps } from 'components/Icon'
+import { IconProps } from 'components/icon'
 import Github from 'public/github.json'
 import LinkedIn from 'public/linkedin.json'
 
