@@ -29,7 +29,7 @@ export const skills: string[] = [
   'SASS',
   'Bootstrap',
   'Tailwind',
-  'HTML',
+  'HTML5',
   'GIMP 2',
   'VSCode'
 ]
