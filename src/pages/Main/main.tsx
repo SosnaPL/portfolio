@@ -19,7 +19,7 @@ export const Main = () => {
 
   return (
     <div className="main">
-      <ScrollSpy scrollThrottle={100} useBoxMethod={false} offsetBottom={200}>
+      <ScrollSpy scrollThrottle={100} useBoxMethod={false} offsetBottom={400}>
         <section id="home" className="flex relative">
           <Introduction />
         </section>

@@ -46,8 +46,16 @@ export const Experience = () => {
             <span className="p-0 sm:pl-4">
               I prefer to follow the industry's lead. My mission is to keep up with emerging
               technologies. I also enjoy posting articles on
-              <span className="text-sky-400 cursor-pointer"> medium </span>to share my knowledge
-              with others.
+              <a
+                className="text-sky-400 cursor-pointer"
+                aria-label="Medium"
+                href="https://medium.com/@elonslayer/yield-farming-est-8901a3940801"
+                target="_blank"
+              >
+                {' '}
+                medium{' '}
+              </a>
+              to share my knowledge with others.
             </span>
           </div>
         </>
