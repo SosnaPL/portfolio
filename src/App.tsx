@@ -1,9 +1,9 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
-import Navbar from './components/Navbar/navbar'
-import LottieWrapper from './components/lottieWrapper'
-import Loader from './public/loader.json'
+import Navbar from 'components/Navbar/navbar'
+import LottieWrapper from 'components/lottieWrapper'
+import Loader from 'public/loader.json'
 
 const Main = React.lazy(() => import('./pages/Main/main'))
 
