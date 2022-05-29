@@ -2,10 +2,11 @@ import './style.scss'
 import { useState } from 'react'
 
 import smoothScroll from 'components/smoothScroll'
+import ExperienceTab from 'components/About/experienceTab'
 
 import { motion, AnimatePresence } from 'framer-motion'
 
-enum Pages {
+export enum Pages {
   SKILLS = 'skills',
   EDUCATION = 'education'
 }
@@ -75,23 +76,13 @@ export const Experience = () => {
 
   return (
     <div className="flex flex-col gap-5 text-neutral-300">
-      <div className="flex justify-center md:justify-start text-white font-semibold gap-4 text-base sm:text-2xl ">
-        <h2
-          className={`experience-tab flex flex-col justify-center hover:text-gray-500 duration-150 sm:justify-start ${
-            view == Pages.SKILLS && 'current_tab '
-          }`}
-          onClick={() => setView(Pages.SKILLS)}
-        >
+      <div className="flex justify-center md:justify-start text-white font-semibold gap-4 text-base sm:text-2xl">
+        <ExperienceTab view={view} setView={setView} to={Pages.SKILLS}>
           Main Skills
-        </h2>
-        <h2
-          className={`experience-tab flex flex-col justify-center hover:text-gray-500 duration-150 sm:justify-start ${
-            view == Pages.EDUCATION && 'current_tab'
-          }`}
-          onClick={() => setView(Pages.EDUCATION)}
-        >
+        </ExperienceTab>
+        <ExperienceTab view={view} setView={setView} to={Pages.EDUCATION}>
           Education & Certificates
-        </h2>
+        </ExperienceTab>
       </div>
       <div className="bg-neutral-800 rounded-2xl p-4 sm:p-6">
         <AnimatePresence exitBeforeEnter>
