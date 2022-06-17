@@ -4,7 +4,7 @@ import { skills } from '../constants'
 
 const TagCloud = require('TagCloud')
 
-export const Technologies = ({ isVisible }: { isVisible: boolean }) => {
+export const Technologies = ({ isVisible }: { isVisible: Boolean }) => {
   const [tc, setTc] = useState(null)
 
   const generateLightColorHex = () => {

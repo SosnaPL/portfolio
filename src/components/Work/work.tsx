@@ -1,8 +1,8 @@
+import VisibilitySensor from 'react-visibility-sensor'
+
+import GithubCalendar from './githubCalendar'
 import ProgressCircle from './progressCircle'
 import Technologies from './technologies'
-import GithubCalendar from './githubCalendar'
-
-import VisibilitySensor from 'react-visibility-sensor'
 
 const progressDetails = ['Performance', 'Accessibility', 'Best Practices', 'SEO']
 const progressColors = [
@@ -24,7 +24,7 @@ export const Work = () => {
         })}
       </div>
       <VisibilitySensor partialVisibility={true}>
-        {({ isVisible }) => {
+        {({ isVisible }: { isVisible: Boolean }) => {
           return (
             <div className="flex flex-col xl:flex-row gap-y-6 justify-center items-center flex-grow">
               <div className="flex flex-col items-center justify-between gap-10 w-full xl:w-1/2">

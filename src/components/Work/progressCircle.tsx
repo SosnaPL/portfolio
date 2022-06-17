@@ -1,7 +1,6 @@
 import { useState } from 'react'
-
+import { buildStyles, CircularProgressbarWithChildren } from 'react-circular-progressbar'
 import { useCountUp } from 'react-countup'
-import { CircularProgressbarWithChildren, buildStyles } from 'react-circular-progressbar'
 import VisibilitySensor from 'react-visibility-sensor'
 
 export const ProgressCircle = ({ title, color }) => {
@@ -11,9 +10,9 @@ export const ProgressCircle = ({ title, color }) => {
     ref: title,
     start: 0,
     end: 100,
-    duration: 1,
+    duration: 2,
     startOnMount: false,
-    onEnd: ({ pauseResume }) => setEnded(true)
+    onEnd: () => setEnded(true)
   })
 
   return (
@@ -30,8 +29,9 @@ export const ProgressCircle = ({ title, color }) => {
               <CircularProgressbarWithChildren
                 value={percentage}
                 background={false}
+                strokeWidth={15}
                 styles={buildStyles({
-                  pathTransitionDuration: visible ? 1.5 : 0,
+                  pathTransitionDuration: visible ? 2 : 0,
                   pathColor: color,
                   trailColor: 'transparent'
                 })}

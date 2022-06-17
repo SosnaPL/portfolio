@@ -1,9 +1,9 @@
 import { useEffect } from 'react'
 
-import Introduction from 'components/Introduction/introduction'
 import { About } from 'components/About/about'
-import { Work } from 'components/Work/work'
 import { navigationElements } from 'components/constants'
+import Introduction from 'components/Introduction/introduction'
+import { Work } from 'components/Work/work'
 
 import ScrollSpy from 'react-ui-scrollspy'
 

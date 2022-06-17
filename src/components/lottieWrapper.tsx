@@ -1,6 +1,5 @@
-import { useEffect } from 'react'
-
 import { useLottie } from 'lottie-react'
+import { useEffect } from 'react'
 
 export interface LottieWrapperProps {
   lottie: any

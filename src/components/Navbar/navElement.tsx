@@ -1,5 +1,3 @@
-import './style.scss'
-
 import smoothScroll from 'components/smoothScroll'
 
 export interface NavbarElementProps {

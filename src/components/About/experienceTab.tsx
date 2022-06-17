@@ -13,7 +13,7 @@ export const ExperienceTab = ({ view, setView, to, children }: experienceTabProp
       className={`experience-tab flex flex-col justify-center hover:text-gray-500 duration-150 sm:justify-start ${
         view == to && 'current_tab'
       }`}
-      onClick={() => setView(to)}
+      onClick={setView.bind(null, to)}
     >
       {children}
     </h2>

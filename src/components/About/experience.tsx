@@ -1,10 +1,10 @@
-import './style.scss'
+import { AnimatePresence, motion } from 'framer-motion'
 import { useState } from 'react'
 
-import smoothScroll from 'components/smoothScroll'
 import ExperienceTab from 'components/About/experienceTab'
-
-import { motion, AnimatePresence } from 'framer-motion'
+import 'styles/experience.scss'
+import { ExperienceEducation } from './experienceEducation'
+import { ExperienceSkills } from './experienceSkills'
 
 export enum Pages {
   SKILLS = 'skills',
@@ -14,64 +14,6 @@ export enum Pages {
 export const Experience = () => {
   const [view, setView] = useState<Pages>(Pages.SKILLS)
 
-  const viewContent = () => {
-    if (view == Pages.SKILLS) {
-      return (
-        <>
-          <div className="flex flex-col gap-2">
-            <span className="text-sky-400 font-bold">Web Development</span>
-            <span className="p-0 sm:pl-4">
-              I design responsive websites that are fast, simple to use, and constructed according
-              to best practices. My main area of specialization is front-end development, i.e.
-              creating small and medium-sized web applications using different
-              <span
-                className="text-sky-400 cursor-pointer"
-                onClick={smoothScroll.bind(null, 'work')}
-              >
-                {' '}
-                technologies
-              </span>
-              .
-            </span>
-          </div>
-          <div className="flex flex-col gap-2">
-            <span className="text-sky-400 font-bold">UX/UI</span>
-            <span className="p-0 sm:pl-4">
-              I work to improve user satisfaction, reduce user churn, and guarantee that user-based
-              organizational goals are met.
-            </span>
-          </div>
-          <div className="flex flex-col gap-2">
-            <span className="text-sky-400 font-bold">Content Writing</span>
-            <span className="p-0 sm:pl-4">
-              I prefer to follow the industry's lead. My mission is to keep up with emerging
-              technologies. I also enjoy sharing my knowledge with others.
-            </span>
-          </div>
-        </>
-      )
-    } else if (view == Pages.EDUCATION) {
-      return (
-        <>
-          <div className="flex flex-col">
-            <span>Engineer of IT</span>
-            <span className="text-base font-bold text-neutral-500 pl-1 pt-1">
-              September 2015 - April 2019
-            </span>
-          </div>
-          <div className="flex flex-col">
-            <span>React from scratch - strefakursów.pl</span>
-            <span className="text-base font-bold text-neutral-500 pl-1 pt-1">January 2021</span>
-          </div>
-          <div className="flex flex-col">
-            <span>Web SPA applications with React and Flux - Altkom Akademia</span>
-            <span className="text-base font-bold text-neutral-500 pl-1 pt-1">September 2021</span>
-          </div>
-        </>
-      )
-    }
-  }
-
   return (
     <div className="flex flex-col gap-5 text-neutral-300">
       <div className="flex justify-center md:justify-start text-white font-semibold gap-4 text-base sm:text-2xl">
@@ -79,7 +21,7 @@ export const Experience = () => {
           Main Skills
         </ExperienceTab>
         <ExperienceTab view={view} setView={setView} to={Pages.EDUCATION}>
-          Education & Certificates
+          Education & Employment
         </ExperienceTab>
       </div>
       <div className="bg-neutral-800 rounded-2xl p-4 sm:p-6">
@@ -92,7 +34,7 @@ export const Experience = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
           >
-            {viewContent()}
+            {view == Pages.SKILLS ? <ExperienceSkills /> : <ExperienceEducation />}
           </motion.div>
         </AnimatePresence>
       </div>

@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react'
+import TextTransition, { presets } from 'react-text-transition'
 
 import { jobPositions, socialIcons } from 'components/constants'
 import Icon from 'components/icon'
-
-import TextTransition, { presets } from 'react-text-transition'
 
 export const Description = () => {
   const [index, setIndex] = useState(0)
