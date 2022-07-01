@@ -1,10 +1,10 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { useState } from 'react'
 
-import ExperienceTab from 'components/About/experienceTab'
+import ExperienceTab from 'components/aboutt/ExperienceTab'
 import 'styles/experience.scss'
-import { ExperienceEducation } from './experienceEducation'
-import { ExperienceSkills } from './experienceSkills'
+import { ExperienceEducation } from './ExperienceEducation'
+import { ExperienceSkills } from './ExperienceSkills'
 
 export enum Pages {
   SKILLS = 'skills',

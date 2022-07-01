@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import { skills } from '../constants'
+import { skills } from '../Constantss'
 
 const TagCloud = require('TagCloud')
 

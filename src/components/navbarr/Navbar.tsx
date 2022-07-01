@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
-import { navigationElements } from 'components/constants'
-import { NavbarElement } from 'components/Navbar/navElement'
+import { navigationElements } from 'components/Constantss'
+import { NavbarElement } from 'components/navbarr/NavbarElement'
 import 'styles/navbar.scss'
 
 export const Navbar = () => {

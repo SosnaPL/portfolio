@@ -1,4 +1,4 @@
-import smoothScroll from 'components/smoothScroll'
+import smoothScroll from 'components/SmoothScrolll'
 
 export const ExperienceSkills = () => {
   return (

@@ -1,4 +1,4 @@
-import { Pages } from 'components/About/experience'
+import { Pages } from 'components/aboutt/Experience'
 
 interface experienceTabProps {
   view: Pages

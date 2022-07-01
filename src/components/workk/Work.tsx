@@ -1,8 +1,8 @@
 import VisibilitySensor from 'react-visibility-sensor'
 
-import GithubCalendar from './githubCalendar'
-import ProgressCircle from './progressCircle'
-import Technologies from './technologies'
+import GithubCalendar from './GithubCalendar'
+import ProgressCircle from './ProgressCircle'
+import Technologies from './Technologies'
 
 const progressDetails = ['Performance', 'Accessibility', 'Best Practices', 'SEO']
 const progressColors = [

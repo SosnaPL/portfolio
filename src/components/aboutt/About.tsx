@@ -1,5 +1,5 @@
-import Experience from 'components/About/experience'
-import LottieWrapper from 'components/lottieWrapper'
+import Experience from 'components/aboutt/Experience'
+import LottieWrapper from 'components/LottieWrapperr'
 import Profile from 'public/profile.json'
 
 export const About = () => {
