@@ -2,11 +2,11 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
-import LottieWrapper from 'components/lottieWrapper'
-import Navbar from 'components/Navbar/navbar'
+import LottieWrapper from 'components/LottieWrapperr'
+import Navbar from 'components/navbarr/Navbar'
 import Loader from 'public/loader.json'
 
-const Main = React.lazy(() => import('./pages/Main/main'))
+const Main = React.lazy(() => import('./pages/Mainn'))
 
 export const App = () => {
   return (
