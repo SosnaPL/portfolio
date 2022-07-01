@@ -1,6 +1,6 @@
-import { Pages } from 'components/aboutt/Experience'
+import { Pages } from './Experience'
 
-interface experienceTabProps {
+type experienceTabProps = {
   view: Pages
   setView: React.Dispatch<React.SetStateAction<Pages>>
   to: Pages

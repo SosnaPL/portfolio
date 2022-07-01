@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import TextTransition, { presets } from 'react-text-transition'
 
-import { jobPositions, socialIcons } from 'components/Constantss'
-import Icon from 'components/Iconn'
+import { jobPositions, socialIcons } from 'components/Constants'
+import Icon from 'components/Icon'
 
 export const Description = () => {
   const [index, setIndex] = useState(0)
@@ -26,9 +26,9 @@ export const Description = () => {
         />
       </h1>
       <div className="flex items-center pt-6 sm:pt-8 md:pt-10 gap-2 sm:gap-5">
-        {socialIcons.map((icon, key) => {
-          return <Icon key={key} {...icon} />
-        })}
+        {socialIcons.map((icon, key) => (
+          <Icon key={key} {...icon} />
+        ))}
       </div>
     </div>
   )

@@ -1,7 +1,6 @@
-import { IconProps } from 'components/Iconn'
-import { NavbarElementProps } from 'components/navbarr/NavbarElement'
-import Github from 'public/github.json'
-import LinkedIn from 'public/linkedin.json'
+import Github from 'assets/github.json'
+import LinkedIn from 'assets/linkedin.json'
+import { IconInfo, NavbarElementInfo } from 'types'
 
 type Education = {
   name: string
@@ -10,7 +9,7 @@ type Education = {
 
 export const jobPositions: string[] = ['Web Developer', 'Designer', 'Content Writer']
 
-export const navigationElements: NavbarElementProps[] = [
+export const navigationElements: NavbarElementInfo[] = [
   {
     id: 'home',
     name: 'Home'
@@ -27,7 +26,7 @@ export const navigationElements: NavbarElementProps[] = [
 
 const socialIconClass = 'h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 text-gray-500'
 
-export const socialIcons: IconProps[] = [
+export const socialIcons: IconInfo[] = [
   {
     name: 'Github',
     href: 'https://github.com/SosnaPL',

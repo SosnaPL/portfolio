@@ -1,4 +1,4 @@
-import { education } from '../Constantss'
+import { education } from '../Constants'
 
 export const ExperienceEducation = () => {
   return (

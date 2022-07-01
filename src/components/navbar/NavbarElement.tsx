@@ -1,11 +1,7 @@
-import smoothScroll from 'components/SmoothScrolll'
+import smoothScroll from 'components/SmoothScroll'
+import { NavbarElementInfo } from 'types'
 
-export interface NavbarElementProps {
-  id: string
-  name: string
-}
-
-export const NavbarElement = ({ id, name }: NavbarElementProps) => {
+export const NavbarElement = ({ id, name }: NavbarElementInfo) => {
   return (
     <span
       className="nav-item relative pb-1 sm:pb-2 cursor-pointer"

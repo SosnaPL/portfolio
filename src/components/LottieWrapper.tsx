@@ -1,12 +1,9 @@
 import { useLottie } from 'lottie-react'
 import { useEffect } from 'react'
 
-export interface LottieWrapperProps {
-  lottie: any
-  className?: string
-}
+import { LottieWrapperInfo } from 'types'
 
-const LottieWrapper = ({ lottie, className }: LottieWrapperProps) => {
+const LottieWrapper = ({ lottie, className }: LottieWrapperInfo) => {
   const options = {
     animationData: lottie,
     loop: true,

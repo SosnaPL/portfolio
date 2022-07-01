@@ -1,7 +1,7 @@
-import { Description } from 'components/indtroductionn/Description'
-import LottieWrapper from 'components/LottieWrapperr'
-import { ParticlesRenderer } from 'components/Particles'
-import Coding from 'public/coding.json'
+import Description from './Description'
+import LottieWrapper from 'components/LottieWrapper'
+import ParticlesRenderer from 'components/Particles'
+import Coding from 'assets/coding.json'
 
 export const Introduction = () => {
   return (
