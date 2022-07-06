@@ -8,7 +8,7 @@ export const Navbar = () => {
   const [posY, setPosY] = useState(0)
 
   useEffect(() => {
-    const handleScroll = (e) => setPosY(window.pageYOffset)
+    const handleScroll = () => setPosY(window.pageYOffset)
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -21,9 +21,9 @@ export const Navbar = () => {
       style={{ zIndex: 100 }}
     >
       <div className="flex text-neutral-300 text-base md:text-2xl font-bold gap-4">
-        {navigationElements.map((navelement, key) => {
-          return <NavbarElement key={key} {...navelement} />
-        })}
+        {navigationElements.map((navelement, key) => (
+          <NavbarElement key={key} {...navelement} />
+        ))}
       </div>
     </div>
   )

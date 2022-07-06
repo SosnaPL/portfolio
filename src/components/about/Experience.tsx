@@ -18,10 +18,10 @@ export const Experience = () => {
     <div className="flex flex-col gap-5 text-neutral-300">
       <div className="flex justify-center md:justify-start text-white font-semibold gap-4 text-base sm:text-2xl">
         <ExperienceTab view={view} setView={setView} to={Pages.SKILLS}>
-          Main Skills
+          {'Main Skills'}
         </ExperienceTab>
         <ExperienceTab view={view} setView={setView} to={Pages.EDUCATION}>
-          Education & Employment
+          {'Education & Employment'}
         </ExperienceTab>
       </div>
       <div className="bg-neutral-800 rounded-2xl p-4 sm:p-6">

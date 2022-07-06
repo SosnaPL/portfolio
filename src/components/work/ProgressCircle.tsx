@@ -3,14 +3,15 @@ import { buildStyles, CircularProgressbarWithChildren } from 'react-circular-pro
 import { useCountUp } from 'react-countup'
 import VisibilitySensor from 'react-visibility-sensor'
 
-export const ProgressCircle = ({ title, color }) => {
+export const ProgressCircle = (props: { title: string; color: string }) => {
   const [ended, setEnded] = useState(false)
 
   const { start } = useCountUp({
-    ref: title,
+    ref: props.title,
     start: 0,
     end: 100,
     duration: 2,
+    prefix: '~',
     startOnMount: false,
     onEnd: () => setEnded(true)
   })
@@ -20,34 +21,32 @@ export const ProgressCircle = ({ title, color }) => {
       <VisibilitySensor partialVisibility={true} active={!ended}>
         {({ isVisible }) => {
           const visible = !ended ? isVisible : true
-          const percentage = visible ? 100 : 0
           if (visible && !ended) {
             start()
           }
           return (
             <div className="w-24 lg:w-40">
               <CircularProgressbarWithChildren
-                value={percentage}
+                value={visible ? 100 : 0}
                 background={false}
-                strokeWidth={15}
+                strokeWidth={12}
                 styles={buildStyles({
                   pathTransitionDuration: visible ? 2 : 0,
-                  pathColor: color,
+                  pathColor: props.color,
                   trailColor: 'transparent'
                 })}
               >
-                <div className="text-lg sm:text-2xl lg:text-4xl font-semibold text-white">
-                  ~<span id={title}></span>
-                </div>
+                <span
+                  id={props.title}
+                  className="text-lg sm:text-2xl lg:text-4xl font-semibold text-white"
+                ></span>
               </CircularProgressbarWithChildren>
             </div>
           )
         }}
       </VisibilitySensor>
-      <span
-        className={`text-neutral-300 font-semibold text-sm sm:text-lg md:text-xl lg:text-4xl text-center`}
-      >
-        {title}
+      <span className="text-neutral-300 font-semibold text-sm sm:text-lg md:text-xl lg:text-4xl text-center">
+        {props.title}
       </span>
     </div>
   )

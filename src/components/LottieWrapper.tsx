@@ -3,12 +3,12 @@ import { useEffect } from 'react'
 
 import { LottieWrapperInfo } from 'types'
 
-const LottieWrapper = ({ lottie, className }: LottieWrapperInfo) => {
+const LottieWrapper = (props: LottieWrapperInfo) => {
   const options = {
-    animationData: lottie,
+    animationData: props.lottie,
     loop: true,
     autoplay: true,
-    className: className
+    className: props.className
   }
 
   const { View, play, pause } = useLottie(options as any)

@@ -7,7 +7,9 @@ type Education = {
   date: string
 }
 
-export const jobPositions: string[] = ['Web Developer', 'Designer', 'Content Writer']
+const socialIconClass = 'h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 text-gray-500'
+
+export const jobPositions = ['Web Developer', 'Designer', 'Content Writer']
 
 export const navigationElements: NavbarElementInfo[] = [
   {
@@ -24,8 +26,6 @@ export const navigationElements: NavbarElementInfo[] = [
   }
 ]
 
-const socialIconClass = 'h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 text-gray-500'
-
 export const socialIcons: IconInfo[] = [
   {
     name: 'Github',
@@ -41,7 +41,7 @@ export const socialIcons: IconInfo[] = [
   }
 ]
 
-export const skills: string[] = [
+export const skills = [
   'ReactJS',
   'Svelte',
   'SolidJS',
@@ -74,5 +74,16 @@ export const education: Education[] = [
   {
     name: 'Junior Software Developer - HusariaSolutions',
     date: 'May 2022 - Present'
+  }
+]
+
+export const githubList = [
+  {
+    title: 'Commercial',
+    username: 'SosnaDev'
+  },
+  {
+    title: 'Personal',
+    username: 'SosnaPL'
   }
 ]

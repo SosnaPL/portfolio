@@ -1,32 +1,32 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const InlineChunkHtmlPlugin = require("react-dev-utils/InlineChunkHtmlPlugin");
-const path = require("path");
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const InlineChunkHtmlPlugin = require('react-dev-utils/InlineChunkHtmlPlugin')
+const path = require('path')
 
 module.exports = {
-  mode: process.env.NODE_ENV ? "development" : "production",
+  mode: process.env.NODE_ENV ? 'development' : 'production',
   entry: {
-    index: "./src/index.tsx"
+    index: './src/index.tsx'
   },
   output: {
-    filename: "[name]-[fullhash:8].bundle.js",
-    chunkFilename: "[name]-[chunkhash:8].chunk.js",
-    path: path.resolve(__dirname, "dist"),
-    publicPath: "/",
+    filename: '[name]-[fullhash:8].bundle.js',
+    chunkFilename: '[name]-[chunkhash:8].chunk.js',
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/'
   },
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".jsx"],
-    modules: [path.resolve(__dirname, "src"), "node_modules"]
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
+    modules: [path.resolve(__dirname, 'src'), 'node_modules']
   },
   module: {
     rules: [
       {
         test: /\.tsx?$/,
         use: 'ts-loader',
-        exclude: /node_modules/,
+        exclude: /node_modules/
       },
       {
         test: /\.(s*)css$/,
-        use: ["style-loader", "css-loader", "postcss-loader", "sass-loader"],
+        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
       },
       {
         test: /\.(woff|woff2|eot|ttf)$/,
@@ -34,7 +34,7 @@ module.exports = {
           {
             loader: 'url-loader',
             options: {
-              limit: 100000,
+              limit: 100000
             }
           }
         ]
@@ -43,60 +43,57 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/i,
         use: [
           {
-            loader: 'file-loader',
-          },
-        ],
+            loader: 'file-loader'
+          }
+        ]
       },
       {
         test: /\.js$/,
-        enforce: "pre",
-        use: ["source-map-loader"],
+        enforce: 'pre',
+        use: ['source-map-loader']
       }
     ]
   },
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: "index.html",
+      template: 'index.html',
       inject: true,
-      favicon: 'src/logo/favicon.ico'
+      favicon: 'src/assets/favicon.ico'
     }),
     new InlineChunkHtmlPlugin(HtmlWebpackPlugin, [/runtime/])
   ],
   optimization: {
     usedExports: true,
     runtimeChunk: {
-      name: entrypoint => `runtime~${entrypoint.name}`
+      name: (entrypoint) => `runtime~${entrypoint.name}`
     }
   },
   devServer: {
-    historyApiFallback: true,
-  },
-};
+    historyApiFallback: true
+  }
+}
 
-if (process.env.NODE_ENV === "development") {
+if (process.env.NODE_ENV === 'development') {
   const dev = {
-    devtool: "source-map",
+    devtool: 'source-map',
     output: {
-      filename: "[name].bundle.js",
-      chunkFilename: "[name].chunk.js",
-      path: path.resolve(__dirname, "dist")
+      filename: '[name].bundle.js',
+      chunkFilename: '[name].chunk.js',
+      path: path.resolve(__dirname, 'dist')
     },
     devServer: {
-      contentBase: path.join(__dirname, "dist"),
+      contentBase: path.join(__dirname, 'dist'),
       historyApiFallback: true,
       hot: true,
       compress: true,
       port: 8080,
-      historyApiFallback: true,
       headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods":
-          "GET, POST, PUT, DELETE, PATCH, OPTIONS",
-        "Access-Control-Allow-Headers":
-          "X-Requested-With, content-type, Authorization"
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
+        'Access-Control-Allow-Headers': 'X-Requested-With, content-type, Authorization'
       }
     }
-  };
-  module.exports = { ...module.exports, ...dev };
+  }
+  module.exports = { ...module.exports, ...dev }
 }

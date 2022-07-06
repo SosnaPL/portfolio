@@ -4,20 +4,15 @@ import { skills } from '../Constants'
 
 const TagCloud = require('TagCloud')
 
-export const Technologies = ({ isVisible }: { isVisible: Boolean }) => {
+export const Technologies = (props: { isVisible: Boolean }) => {
   const [tc, setTc] = useState(null)
-
-  const generateLightColorHex = () => {
-    let color = 'hsl(' + Math.random() * 360 + ', 100%, 75%)'
-    return color
-  }
 
   const container = '.tagcloud'
 
   const options = {
     radius: 200,
     maxSpeed: 'fast',
-    initSpeed: 'fast',
+    initSpeed: 'normal',
     direction: 135,
     keep: true
   }
@@ -28,16 +23,16 @@ export const Technologies = ({ isVisible }: { isVisible: Boolean }) => {
     setTc(cloud)
     const tagItems = document.querySelectorAll('.tagcloud--item')
     tagItems.forEach((item) => {
-      let i = item as HTMLElement
-      i.style.color = `${generateLightColorHex()}`
+      const i = item as HTMLElement
+      i.style.color = 'hsl(' + Math.random() * 360 + ', 100%, 75%)'
     })
   }, [])
 
   useEffect(() => {
     if (tc) {
-      isVisible ? tc.resume() : tc.pause()
+      props.isVisible ? tc.resume() : tc.pause()
     }
-  }, [isVisible])
+  }, [props.isVisible])
 
   return <div className="tagcloud"></div>
 }

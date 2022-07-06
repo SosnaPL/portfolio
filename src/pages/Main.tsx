@@ -1,16 +1,15 @@
 import { useEffect } from 'react'
+import ScrollSpy from 'react-ui-scrollspy'
 
 import { About } from 'components/about/About'
 import { navigationElements } from 'components/Constants'
 import Introduction from 'components/introduction/Introduction'
 import { Work } from 'components/work/Work'
 
-import ScrollSpy from 'react-ui-scrollspy'
-
 export const Main = () => {
   useEffect(() => {
     const hash = window.location.hash
-    Object.values(navigationElements).map((obj) => {
+    Object.values(navigationElements).forEach((obj) => {
       if (Object.values(obj).includes(hash.split('#')[1])) {
         document.querySelector(hash).scrollIntoView()
       }

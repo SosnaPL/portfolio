@@ -1,3 +1,5 @@
+import React from 'react'
+
 import { Pages } from './Experience'
 
 type experienceTabProps = {
@@ -7,15 +9,15 @@ type experienceTabProps = {
   children: string
 }
 
-export const ExperienceTab = ({ view, setView, to, children }: experienceTabProps) => {
+export const ExperienceTab = (props: experienceTabProps) => {
   return (
     <h2
       className={`experience-tab flex flex-col justify-center hover:text-gray-500 duration-150 sm:justify-start ${
-        view == to && 'current_tab'
+        props.view == props.to && 'current_tab'
       }`}
-      onClick={setView.bind(null, to)}
+      onClick={props.setView.bind(null, props.to)}
     >
-      {children}
+      {props.children}
     </h2>
   )
 }
