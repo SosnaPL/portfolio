@@ -21,11 +21,6 @@ export const Technologies = (props: { isVisible: Boolean }) => {
     const cloud = TagCloud(container, skills, options)
     cloud.pause()
     setTc(cloud)
-    const tagItems = document.querySelectorAll('.tagcloud--item')
-    tagItems.forEach((item) => {
-      const i = item as HTMLElement
-      i.style.color = 'rgb(56, 189, 248)'
-    })
   }, [])
 
   useEffect(() => {
@@ -34,7 +29,7 @@ export const Technologies = (props: { isVisible: Boolean }) => {
     }
   }, [props.isVisible])
 
-  return <div className="tagcloud"></div>
+  return <div className="tagcloud font-bold text-sky-400"></div>
 }
 
 export default Technologies
