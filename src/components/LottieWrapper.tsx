@@ -22,7 +22,11 @@ const LottieWrapper = (props: LottieWrapperInfo) => {
     inView ? play() : pause()
   }, [inView])
 
-  return <div ref={ref}>{View}</div>
+  return (
+    <div className="flex justify-center" ref={ref}>
+      {View}
+    </div>
+  )
 }
 
 export default LottieWrapper
