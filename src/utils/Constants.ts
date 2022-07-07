@@ -43,6 +43,8 @@ export const skills = [
   'React Native',
   'TypeScript',
   'ES5/ES6+',
+  'Webpack',
+  'Vite',
   'Git',
   'CSS3',
   'SASS',
