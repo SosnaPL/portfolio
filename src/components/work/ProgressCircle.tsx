@@ -18,7 +18,7 @@ export const ProgressCircle = (props: { title: string; color: string }) => {
 
   return (
     <div className="flex flex-col items-center gap-2 w-1/2 sm:w-1/4">
-      <VisibilitySensor partialVisibility={true} active={!ended}>
+      <VisibilitySensor partialVisibility active={!ended}>
         {({ isVisible }) => {
           const visible = !ended ? isVisible : true
           if (visible && !ended) {
@@ -38,7 +38,7 @@ export const ProgressCircle = (props: { title: string; color: string }) => {
               >
                 <span
                   id={props.title}
-                  className="text-lg sm:text-2xl lg:text-4xl font-semibold text-white"
+                  className="text-lg sm:text-2xl lg:text-4xl font-semibold text-neutral-300"
                 ></span>
               </CircularProgressbarWithChildren>
             </div>

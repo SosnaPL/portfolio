@@ -13,14 +13,14 @@ const LottieWrapper = (props: LottieWrapperInfo) => {
 
   const { View, play, pause } = useLottie(options as any)
 
-  const changeVisiblity = () => {
+  const onVisiblityChange = () => {
     document.visibilityState == 'hidden' ? pause() : play()
   }
 
   useEffect(() => {
-    document.addEventListener('visibilitychange', changeVisiblity)
+    document.addEventListener('visibilitychange', onVisiblityChange)
     return () => {
-      document.removeEventListener('visibilitychange', changeVisiblity)
+      document.removeEventListener('visibilitychange', onVisiblityChange)
     }
   }, [])
 

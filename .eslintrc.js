@@ -3,6 +3,10 @@ module.exports = {
     browser: true,
     es2021: true
   },
+  globals: {
+    React: true,
+    JSX: true
+  },
   extends: ['standard', 'plugin:react/recommended'],
   parser: '@typescript-eslint/parser',
   parserOptions: {

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import TextTransition, { presets } from 'react-text-transition'
 
-import { jobPositions, socialIcons } from 'components/Constants'
+import { jobPositions, socialIcons } from 'utils/Constants'
 import Icon from 'components/Icon'
 
 export const Description = () => {

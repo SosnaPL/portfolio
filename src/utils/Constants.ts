@@ -1,11 +1,6 @@
 import Github from 'assets/github.json'
 import LinkedIn from 'assets/linkedin.json'
-import { IconInfo, NavbarElementInfo } from 'types'
-
-type Education = {
-  name: string
-  date: string
-}
+import { EducationInfo, IconInfo, NavbarElementInfo } from 'types'
 
 const socialIconClass = 'h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 text-gray-500'
 
@@ -58,21 +53,25 @@ export const skills = [
   'VSCode'
 ]
 
-export const education: Education[] = [
+export const education: EducationInfo[] = [
   {
     name: 'Engineer of IT',
     date: 'September 2015 - April 2019'
   },
   {
-    name: 'React from scratch - strefakursów.pl',
+    name: 'React from scratch',
+    source: 'strefakursów.pl',
     date: 'January 2021'
   },
   {
-    name: 'Web SPA applications with React and Flux - Altkom Akademia',
+    name: 'Web SPA applications with React and Flux',
+    source: 'Altkom Akademia',
     date: 'September 2021'
   },
   {
-    name: 'Junior Software Developer - HusariaSolutions',
+    name: 'Junior Software Developer',
+    source: 'HusariaSolutions',
+    href: 'https://www.husariasolutions.com/',
     date: 'May 2022 - Present'
   }
 ]
@@ -85,5 +84,24 @@ export const githubList = [
   {
     title: 'Personal',
     username: 'SosnaPL'
+  }
+]
+
+export const progressCircles = [
+  {
+    title: 'Performance',
+    color: 'hsla(207, 100%, 50%, 0.8)'
+  },
+  {
+    title: 'Accessibility',
+    color: 'hsla(207, 100%, 50%, 0.8)'
+  },
+  {
+    title: 'Best Practices',
+    color: 'hsla(207, 100%, 50%, 0.8)'
+  },
+  {
+    title: 'SEO',
+    color: 'hsla(207, 100%, 50%, 0.8)'
   }
 ]

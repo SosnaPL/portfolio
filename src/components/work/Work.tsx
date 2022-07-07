@@ -1,11 +1,9 @@
 import VisibilitySensor from 'react-visibility-sensor'
 
-import { githubList } from 'components/Constants'
+import { githubList, progressCircles } from 'utils/Constants'
 import GithubCalendar from './GithubCalendar'
 import ProgressCircle from './ProgressCircle'
 import Technologies from './Technologies'
-
-const progressDetails = ['Performance', 'Accessibility', 'Best Practices', 'SEO']
 
 export const Work = () => {
   return (
@@ -14,11 +12,11 @@ export const Work = () => {
         {'My Work'}
       </h1>
       <div className="flex flex-wrap sm:flex-nowrap gap-y-6 gap-x-0 sm:gap-x-10 sm:gap-y-0 justify-center">
-        {progressDetails.map((title, key) => (
-          <ProgressCircle key={key} title={title} color={'hsla(207, 100%, 50%, 0.6)'} />
+        {progressCircles.map((circle, key) => (
+          <ProgressCircle key={key} {...circle} />
         ))}
       </div>
-      <VisibilitySensor partialVisibility={true}>
+      <VisibilitySensor partialVisibility>
         {({ isVisible }: { isVisible: Boolean }) => (
           <div className="flex flex-col xl:flex-row gap-y-6 justify-center items-center flex-grow">
             <div className="flex flex-col items-center justify-between gap-10 w-full xl:w-1/2">

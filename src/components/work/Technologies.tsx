@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import { skills } from '../Constants'
+import { skills } from '../../utils/Constants'
 
 const TagCloud = require('TagCloud')
 
@@ -24,7 +24,7 @@ export const Technologies = (props: { isVisible: Boolean }) => {
     const tagItems = document.querySelectorAll('.tagcloud--item')
     tagItems.forEach((item) => {
       const i = item as HTMLElement
-      i.style.color = 'hsl(' + Math.random() * 360 + ', 100%, 75%)'
+      i.style.color = 'rgb(56, 189, 248)'
     })
   }, [])
 

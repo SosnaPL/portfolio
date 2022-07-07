@@ -1,4 +1,4 @@
-import smoothScroll from 'components/SmoothScroll'
+import { smoothScroll } from 'utils/SmoothScroll'
 import { NavbarElementInfo } from 'types'
 
 export const NavbarElement = (props: NavbarElementInfo) => {

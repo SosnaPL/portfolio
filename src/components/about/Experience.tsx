@@ -3,8 +3,8 @@ import { useState } from 'react'
 
 import ExperienceTab from 'components/about/ExperienceTab'
 import 'styles/experience.scss'
-import ExperienceEducation from './ExperienceEducation'
-import ExperienceSkills from './ExperienceSkills'
+import Education from './Education'
+import Skills from './Skills'
 
 export enum Pages {
   SKILLS = 'skills',
@@ -15,8 +15,8 @@ export const Experience = () => {
   const [view, setView] = useState<Pages>(Pages.SKILLS)
 
   return (
-    <div className="flex flex-col gap-5 text-neutral-300">
-      <div className="flex justify-center md:justify-start text-white font-semibold gap-4 text-base sm:text-2xl">
+    <div className="flex flex-col gap-2 text-neutral-300">
+      <div className="flex justify-center md:justify-start text-white font-semibold gap-4 text-base sm:text-xl md:text-2xl md:ml-10">
         <ExperienceTab view={view} setView={setView} to={Pages.SKILLS}>
           {'Main Skills'}
         </ExperienceTab>
@@ -24,7 +24,7 @@ export const Experience = () => {
           {'Education & Employment'}
         </ExperienceTab>
       </div>
-      <div className="bg-neutral-800 rounded-2xl p-4 sm:p-6">
+      <div className="bg-neutral-800 rounded-2xl shadow-2xl shadow-black mx-4 mb-4 p-4 sm:p-6">
         <AnimatePresence exitBeforeEnter>
           <motion.div
             key={view}
@@ -34,7 +34,7 @@ export const Experience = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
           >
-            {view == Pages.SKILLS ? <ExperienceSkills /> : <ExperienceEducation />}
+            {view == Pages.SKILLS ? <Skills /> : <Education />}
           </motion.div>
         </AnimatePresence>
       </div>

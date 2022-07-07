@@ -38,8 +38,9 @@ body {
 
 .suspense {
   position: absolute;
-  left: calc(50% - 100px);
-  top: calc(50% - 100px);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 section {
