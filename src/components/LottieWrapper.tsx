@@ -2,8 +2,13 @@ import { useLottie } from 'lottie-react'
 import { useEffect } from 'react'
 
 import { LottieWrapperInfo } from 'types'
+import { useInView } from 'react-intersection-observer'
 
 const LottieWrapper = (props: LottieWrapperInfo) => {
+  const { ref, inView } = useInView({
+    threshold: 0
+  })
+
   const options = {
     animationData: props.lottie,
     loop: true,
@@ -13,18 +18,11 @@ const LottieWrapper = (props: LottieWrapperInfo) => {
 
   const { View, play, pause } = useLottie(options as any)
 
-  const onVisiblityChange = () => {
-    document.visibilityState == 'hidden' ? pause() : play()
-  }
-
   useEffect(() => {
-    document.addEventListener('visibilitychange', onVisiblityChange)
-    return () => {
-      document.removeEventListener('visibilitychange', onVisiblityChange)
-    }
-  }, [])
+    inView ? play() : pause()
+  }, [inView])
 
-  return View
+  return <div ref={ref}>{View}</div>
 }
 
 export default LottieWrapper

@@ -10,7 +10,6 @@ export const ParticlesRenderer = () => {
 
   return (
     <Particles
-      id="tsparticles"
       style={{ position: 'absolute', top: 0, left: 0, zIndex: 10 }}
       options={ParticlesOptions as any}
       init={particlesInit}
