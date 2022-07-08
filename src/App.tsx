@@ -2,9 +2,8 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
-import LottieWrapper from 'components/LottieWrapper'
 import Navbar from 'components/navbar/Navbar'
-import Loader from 'assets/loader.json'
+import SuspenseLoader from './components/SuspenseLoader'
 
 const Main = React.lazy(() => import('./pages/Main'))
 
@@ -12,20 +11,14 @@ export const App = () => {
   return (
     <>
       <Helmet>
-        <title>Sosna</title>
+        <title>{'Sosna'}</title>
         <meta
           name="description"
           content="I create effective responsive websites that are fast, easy to use, built using best practices. My main area of specialization is front-end development, i.e. creating small and medium-sized web applications."
         />
       </Helmet>
       <Router>
-        <React.Suspense
-          fallback={
-            <div className="suspense">
-              <LottieWrapper lottie={Loader} className={'h-52 w-52'} />
-            </div>
-          }
-        >
+        <React.Suspense fallback={<SuspenseLoader />}>
           <Navbar />
           <Routes>
             <Route path="/" element={<Main />} />

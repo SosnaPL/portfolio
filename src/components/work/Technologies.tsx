@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useInView } from 'react-intersection-observer'
 
 import { skills } from '../../utils/Constants'
@@ -6,6 +6,7 @@ import { skills } from '../../utils/Constants'
 const TagCloud = require('TagCloud')
 
 export const Technologies = () => {
+  const tcRef = useRef<HTMLDivElement>()
   const [tc, setTc] = useState(null)
   const { ref, inView } = useInView({
     threshold: 0
@@ -20,7 +21,7 @@ export const Technologies = () => {
   }
 
   useEffect(() => {
-    const cloud = TagCloud('.tagcloud', skills, options)
+    const cloud = TagCloud(tcRef.current, skills, options)
     cloud.pause()
     setTc(cloud)
   }, [])
@@ -31,7 +32,11 @@ export const Technologies = () => {
     }
   }, [inView])
 
-  return <div ref={ref} className="tagcloud font-bold text-sky-400"></div>
+  return (
+    <div ref={ref}>
+      <div ref={tcRef} className="sm:font-bold text-sky-400"></div>
+    </div>
+  )
 }
 
 export default Technologies
