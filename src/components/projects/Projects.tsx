@@ -31,7 +31,7 @@ export function Projects() {
             timeout={1200}
             mountOnEnter
             classNames={{
-              enter: '-translate-y-10 translate-x-0 sm:translate-y-0 sm:-translate-x-10 opacity-0',
+              enter: '-translate-y-10 sm:-translate-x-10 sm:translate-y-0 opacity-0',
               enterActive: `opacity-100 translate-y-0 sm:translate-x-0 transition-all duration-700 ${getClassByDelay(
                 key * 200
               )}`,
