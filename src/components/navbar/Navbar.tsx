@@ -21,8 +21,8 @@ export const Navbar = () => {
       style={{ zIndex: 100 }}
     >
       <div className="flex text-neutral-300 text-base md:text-2xl font-bold gap-4">
-        {navigationElements.map((navelement, key) => (
-          <NavbarElement key={key} {...navelement} />
+        {navigationElements.map((navelement) => (
+          <NavbarElement key={navelement.id} {...navelement} />
         ))}
       </div>
     </div>
