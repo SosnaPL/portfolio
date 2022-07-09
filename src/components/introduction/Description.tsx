@@ -6,7 +6,6 @@ import { CSSTransition } from 'react-transition-group'
 import Icon from 'components/Icon'
 import { jobPositions, socialIcons } from 'Constants'
 import 'styles/transitions.scss'
-import { getClassByDelay } from 'utils/getClassByDelay'
 
 export const Description = () => {
   const [index, setIndex] = useState(0)
@@ -14,6 +13,15 @@ export const Description = () => {
     threshold: 0,
     triggerOnce: true
   })
+
+  const getClassByDelay = (delay: number) =>
+    ({
+      200: 'delay-[200ms]',
+      400: 'delay-[400ms]',
+      600: 'delay-[600ms]',
+      800: 'delay-[800ms]',
+      1000: 'delay-[1000ms]'
+    }[delay])
 
   useEffect(() => {
     const intervalId = setInterval(() => setIndex((index) => index + 1), 1800)
