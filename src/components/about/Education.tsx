@@ -1,4 +1,4 @@
-import { education } from '../../utils/Constants'
+import { education } from 'Constants'
 import { EducationInfo } from 'types'
 
 export const Education = () => {

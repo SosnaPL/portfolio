@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { useInView } from 'react-intersection-observer'
 
-import { skills } from '../../utils/Constants'
+import { skills } from 'Constants'
 
 const TagCloud = require('TagCloud')
 

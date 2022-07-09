@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-import { navigationElements } from 'utils/Constants'
+import { navigationElements } from 'Constants'
 import NavbarElement from './NavbarElement'
 import 'styles/navbar.scss'
 

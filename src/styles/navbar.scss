@@ -8,12 +8,16 @@ span.nav-item::after {
   transition: all 0.2s ease-in-out;
 }
 
+span.active-scroll-spy {
+  color: #38bdf8;
+}
+
 span.active-scroll-spy::after {
   position: absolute;
   content: '';
   left: 0;
   width: 100%;
   height: 4px;
-  background: #008bff;
+  background: #38bdf8;
   bottom: 0;
 }

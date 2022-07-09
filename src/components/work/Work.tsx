@@ -1,4 +1,4 @@
-import { githubList, progressCircles } from 'utils/Constants'
+import { githubList, progressCircles } from 'Constants'
 import GithubCalendar from './GithubCalendar'
 import ProgressCircle from './ProgressCircle'
 import Technologies from './Technologies'
