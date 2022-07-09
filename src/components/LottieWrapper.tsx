@@ -1,8 +1,8 @@
 import { useLottie } from 'lottie-react'
 import { useEffect } from 'react'
 
-import { LottieWrapperInfo } from 'types'
 import { useInView } from 'react-intersection-observer'
+import { LottieWrapperInfo } from 'types'
 
 const LottieWrapper = (props: LottieWrapperInfo) => {
   const { ref, inView } = useInView({

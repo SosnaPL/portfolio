@@ -19,3 +19,11 @@ export type EducationInfo = {
   source?: string
   href?: string
 }
+
+export type ProjectInfo = {
+  title: string
+  description: string
+  technologies: string[]
+  repository?: string
+  website?: string
+}

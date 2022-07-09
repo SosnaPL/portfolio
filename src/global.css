@@ -26,7 +26,7 @@ html {
 
 body {
   background: #080808;
-  color: #fff;
+  color: rgb(236, 231, 231);
   box-sizing: border-box;
   text-shadow: 2px 2px #000;
   overflow-x: hidden;

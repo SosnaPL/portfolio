@@ -1,6 +1,12 @@
 import Github from 'assets/github.json'
 import LinkedIn from 'assets/linkedin.json'
-import { EducationInfo, IconInfo, NavbarElementInfo } from 'types'
+import { EducationInfo, IconInfo, NavbarElementInfo, ProjectInfo } from 'types'
+import css3Icon from 'assets/technologies/css3.svg'
+import html5Icon from 'assets/technologies/html5.svg'
+import typescriptIcon from 'assets/technologies/typescript.svg'
+import djangoIcon from 'assets/technologies/django.svg'
+import reactIcon from 'assets/technologies/react.svg'
+import pythonIcon from 'assets/technologies/python.svg'
 
 const socialIconClass = 'h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 text-gray-500'
 
@@ -18,6 +24,10 @@ export const navigationElements: NavbarElementInfo[] = [
   {
     id: 'work',
     name: 'Work'
+  },
+  {
+    id: 'projects',
+    name: 'Projects'
   }
 ]
 
@@ -43,6 +53,7 @@ export const skills = [
   'React Native',
   'TypeScript',
   'ES5/ES6+',
+  'Python',
   'Webpack',
   'Vite',
   'Git',
@@ -105,5 +116,50 @@ export const progressCircles = [
   {
     title: 'SEO',
     color: 'hsla(207, 100%, 50%, 0.8)'
+  }
+]
+
+export const projectsList: ProjectInfo[] = [
+  {
+    title: 'Portfolio',
+    description:
+      'This website ;). Here you can find my personal projects, my latest work and my latest achievements.',
+    technologies: [html5Icon, css3Icon, typescriptIcon, reactIcon],
+    website: 'https://sosna.software/',
+    repository: 'https://github.com/SosnaPL/portfolio'
+  },
+  {
+    title: 'GenshinApps',
+    description:
+      'Damage calculator (with artiffacts simulator in the future) for each individual character in Genshin Impact.',
+    technologies: [html5Icon, css3Icon, typescriptIcon, reactIcon],
+    website: 'https://genshin-apps.com/',
+    repository: 'https://gitlab.com/SosnaPL/genshinaps'
+  },
+  {
+    title: 'MSTAG (Front-end)',
+    description:
+      'Tank Artillery Game with self made notifications/chat/party/friends system. No longer maintained.',
+    technologies: [html5Icon, css3Icon, typescriptIcon, reactIcon, djangoIcon],
+    website: 'https://mstag.netlify.app/',
+    repository: 'https://github.com/SosnaPL/MSTAG-Front-End'
+  },
+  {
+    title: 'Chess VR (Front-end)',
+    description: 'Cross platform chess game that could be played on a website and in VR.',
+    technologies: [html5Icon, css3Icon, typescriptIcon, reactIcon],
+    repository: 'https://gitlab.com/SosnaPL/chessvr'
+  },
+  {
+    title: 'Coub Video Creater',
+    description: 'Python Script that allowed to create video compilations using CoubAPI.',
+    technologies: [pythonIcon],
+    repository: 'https://github.com/SosnaPL/Coub-Video-Creator'
+  },
+  {
+    title: 'File Manager',
+    description:
+      'Simple file manager that allows to upload/download/delete files from a raspberry pi.',
+    technologies: [html5Icon, css3Icon, typescriptIcon, reactIcon]
   }
 ]
