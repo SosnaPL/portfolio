@@ -1,17 +1,25 @@
 import { useInView } from 'react-intersection-observer'
 import { CSSTransition } from 'react-transition-group'
 
+import { SectionContainer } from 'components/SectionContainer'
 import { projectsList } from 'Constants'
 import 'styles/transitions.scss'
 import Project from './Project'
-import { SectionContainer } from 'components/SectionContainer'
-import { getClassByDelay } from 'utils/getClassByDelay'
 
 export function Projects() {
   const { ref, inView } = useInView({
     threshold: 0,
     triggerOnce: true
   })
+
+  const getClassByDelay = (delay: number) =>
+    ({
+      200: 'delay-[200ms]',
+      400: 'delay-[400ms]',
+      600: 'delay-[600ms]',
+      800: 'delay-[800ms]',
+      1000: 'delay-[1000ms]'
+    }[delay])
 
   return (
     <SectionContainer title="My Projects">
