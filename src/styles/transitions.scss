@@ -8,15 +8,3 @@
   transform: translateY(0);
   transition: all ease-in-out 800ms;
 }
-
-.icons-enter {
-  opacity: 0;
-  transform: translateX(40px);
-}
-
-.icons-enter-active {
-  opacity: 1;
-  transform: translateX(0);
-  transition: all ease-in-out 800ms;
-  transition-delay: 400ms;
-}

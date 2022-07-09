@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useInView } from 'react-intersection-observer'
 import TextTransition, { presets } from 'react-text-transition'
-import { CSSTransition } from 'react-transition-group'
+import { CSSTransition, Transition } from 'react-transition-group'
 
 import Icon from 'components/Icon'
 import { jobPositions, socialIcons } from 'Constants'
@@ -13,6 +13,10 @@ export const Description = () => {
     threshold: 0,
     triggerOnce: true
   })
+
+  const transitionStyles = {
+    entered: { opacity: 1, transform: 'translateX(0)' }
+  }
 
   useEffect(() => {
     const intervalId = setInterval(() => setIndex((index) => index + 1), 1800)
@@ -36,13 +40,25 @@ export const Description = () => {
           />
         </h1>
       </CSSTransition>
-      <CSSTransition in={inView} timeout={2000} mountOnEnter classNames="icons">
-        <div className="flex items-center pt-6 sm:pt-8 md:pt-10 gap-2 sm:gap-5">
-          {socialIcons.map((icon, key) => (
-            <Icon key={key} {...icon} />
-          ))}
-        </div>
-      </CSSTransition>
+      <div className="flex items-center pt-6 sm:pt-8 md:pt-10 gap-1 sm:gap-2">
+        {socialIcons.map((icon, key) => (
+          <Transition in={inView} timeout={500 + key * 150} key={icon.name} mountOnEnter>
+            {(state) => (
+              <div
+                style={{
+                  transition: 'all 0.5s ease-in-out',
+                  transitionDelay: `${key * 150}ms`,
+                  opacity: 0,
+                  transform: 'translateX(20px)',
+                  ...transitionStyles[state]
+                }}
+              >
+                <Icon {...icon} />
+              </div>
+            )}
+          </Transition>
+        ))}
+      </div>
     </div>
   )
 }

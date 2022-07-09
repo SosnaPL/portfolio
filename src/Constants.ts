@@ -1,12 +1,13 @@
 import Github from 'assets/github.json'
+import Gitlab from 'assets/gitlab.svg'
 import LinkedIn from 'assets/linkedin.json'
-import { EducationInfo, IconInfo, NavbarElementInfo, ProjectInfo } from 'types'
 import css3Icon from 'assets/technologies/css3.svg'
-import html5Icon from 'assets/technologies/html5.svg'
-import typescriptIcon from 'assets/technologies/typescript.svg'
 import djangoIcon from 'assets/technologies/django.svg'
-import reactIcon from 'assets/technologies/react.svg'
+import html5Icon from 'assets/technologies/html5.svg'
 import pythonIcon from 'assets/technologies/python.svg'
+import reactIcon from 'assets/technologies/react.svg'
+import typescriptIcon from 'assets/technologies/typescript.svg'
+import { EducationInfo, IconInfo, NavbarElementInfo, ProjectInfo } from 'types'
 
 const socialIconClass = 'h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 text-gray-500'
 
@@ -37,6 +38,13 @@ export const socialIcons: IconInfo[] = [
     href: 'https://github.com/SosnaPL',
     lottie: Github,
     className: socialIconClass
+  },
+  {
+    name: 'GitLab',
+    href: 'https://gitlab.com/SosnaPL',
+    lottie: Gitlab,
+    className: socialIconClass,
+    isSvg: true
   },
   {
     name: 'LinkedIn',
