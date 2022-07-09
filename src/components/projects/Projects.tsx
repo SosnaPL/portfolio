@@ -25,7 +25,7 @@ export function Projects() {
       <h1 className="flex justify-center md:justify-start text-5xl sm:text-6xl md:text-7xl font-black">
         {'My Projects'}
       </h1>
-      <div ref={ref} className="flex flex-wrap justify-center md:justify-between gap-6">
+      <div ref={ref} className="flex flex-wrap justify-center gap-6">
         {projectsList.map((project, key) => (
           <CSSTransition
             in={inView}

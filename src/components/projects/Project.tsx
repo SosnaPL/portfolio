@@ -6,7 +6,7 @@ import Show from 'utils/Show'
 export function Project(props: ProjectInfo) {
   return (
     <div className="flex flex-col bg-neutral-800 border-black border-2 shadow-xl shadow-black w-[26rem] 2xl:w-[30rem] h-56 gap-4 rounded-2xl p-4">
-      <div className="flex justify-between">
+      <div className="flex justify-between items-center">
         <span className="text-2xl font-bold">{props.title}</span>
         <div className="flex gap-2">
           <Show when={props.repository}>
