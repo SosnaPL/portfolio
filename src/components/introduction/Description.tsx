@@ -41,7 +41,7 @@ export const Description = () => {
         {socialIcons.map((icon, key) => (
           <CSSTransition
             in={inView}
-            key={key}
+            key={icon.name}
             timeout={1200}
             mountOnEnter
             classNames={{
@@ -51,7 +51,7 @@ export const Description = () => {
               )}`
             }}
           >
-            <Icon key={key} {...icon} />
+            <Icon {...icon} />
           </CSSTransition>
         ))}
       </div>

@@ -19,7 +19,7 @@ export function Projects() {
         {projectsList.map((project, key) => (
           <CSSTransition
             in={inView}
-            key={key}
+            key={project.title}
             timeout={1200}
             mountOnEnter
             classNames={{
