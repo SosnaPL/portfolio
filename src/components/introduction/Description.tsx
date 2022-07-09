@@ -6,6 +6,7 @@ import { CSSTransition } from 'react-transition-group'
 import Icon from 'components/Icon'
 import { jobPositions, socialIcons } from 'Constants'
 import 'styles/transitions.scss'
+import { getClassByDelay } from 'utils/getClassByDelay'
 
 export const Description = () => {
   const [index, setIndex] = useState(0)
@@ -36,13 +37,24 @@ export const Description = () => {
           />
         </h1>
       </CSSTransition>
-      <CSSTransition in={inView} timeout={2000} mountOnEnter classNames="icons">
-        <div className="flex items-center pt-6 sm:pt-8 md:pt-10 gap-2 sm:gap-5">
-          {socialIcons.map((icon, key) => (
+      <div className="flex items-center pt-6 sm:pt-8 md:pt-10 gap-1 sm:gap-2">
+        {socialIcons.map((icon, key) => (
+          <CSSTransition
+            in={inView}
+            key={key}
+            timeout={1200}
+            mountOnEnter
+            classNames={{
+              enter: 'translate-x-5 opacity-0',
+              enterActive: `opacity-100 sm:translate-x-0 transition-all duration-700 ${getClassByDelay(
+                key * 400
+              )}`
+            }}
+          >
             <Icon key={key} {...icon} />
-          ))}
-        </div>
-      </CSSTransition>
+          </CSSTransition>
+        ))}
+      </div>
     </div>
   )
 }

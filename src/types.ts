@@ -6,6 +6,7 @@ export type LottieWrapperInfo = {
 export type IconInfo = LottieWrapperInfo & {
   name: string
   href: string
+  isSvg?: boolean
 }
 
 export type NavbarElementInfo = {

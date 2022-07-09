@@ -1,13 +1,11 @@
 import Experience from 'components/about/Experience'
 import LottieWrapper from 'components/LottieWrapper'
 import Profile from 'assets/profile.json'
+import SectionContainer from '../SectionContainer'
 
 export const About = () => {
   return (
-    <div className="flex flex-col justify-center gap-5 px-0 sm:px-10 md:px-20 xl:px-40">
-      <h1 className="flex justify-center md:justify-start text-5xl sm:text-6xl md:text-7xl font-black">
-        {'About Me'}
-      </h1>
+    <SectionContainer title="About Me">
       <div className="flex flex-col md:flex-row gap-5 text-neutral-300">
         <div className="flex justify-center w-full md:w-60">
           <LottieWrapper lottie={Profile} className="flex justify-center w-1/2 md:w-60" />
@@ -20,7 +18,7 @@ export const About = () => {
         </div>
       </div>
       <Experience />
-    </div>
+    </SectionContainer>
   )
 }
 
