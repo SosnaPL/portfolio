@@ -32,7 +32,7 @@ export const Contact = () => {
           className="h-full opacity-10 2xl:opacity-70 absolute right-0 bottom-0"
         />
       </div>
-      <div className="flex justify-center text-sm sm:text-lg">
+      <div className="flex justify-center text-sm sm:text-lg absolute bottom-0 left-0 w-full p-4">
         {`Copyright ® ${currentYear} Jakub Sosiński. All rights reserved.`}
       </div>
     </SectionContainer>

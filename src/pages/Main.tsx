@@ -38,7 +38,7 @@ export const Main = () => {
           <Section id="projects" className="flex flex-col bg-neutral-900">
             <Projects />
           </Section>
-          <Section id="contact" className="flex flex-col">
+          <Section id="contact" className="flex flex-col relative">
             <Contact />
           </Section>
         </MainContext.Provider>
