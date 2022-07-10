@@ -22,6 +22,15 @@ const LottieWrapper = (props: LottieWrapperInfo) => {
     inView ? play() : pause()
   }, [inView])
 
+  useEffect(() => {
+    window.addEventListener('blur', pause)
+    window.addEventListener('focus', play)
+    return () => {
+      window.removeEventListener('blur', pause)
+      window.removeEventListener('focus', play)
+    }
+  }, [])
+
   return (
     <div className="flex justify-center" ref={ref}>
       {View}

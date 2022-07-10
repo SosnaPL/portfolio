@@ -11,7 +11,7 @@ import { EducationInfo, IconInfo, NavbarElementInfo, ProjectInfo } from 'types'
 
 const socialIconClass = 'h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 text-gray-500'
 
-export const jobPositions = ['Web Developer', 'Designer', 'Content Writer']
+export const jobPositions = ['Software Developer', 'Designer', 'Content Writer']
 
 export const navigationElements: NavbarElementInfo[] = [
   {
