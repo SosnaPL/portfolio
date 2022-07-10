@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import Show from 'utils/Show'
 import SuspenseLoader from './SuspenseLoader'
 
-export const Section = (props: { id: string; className: string; children: JSX.Element }) => {
+export const Section = (props: { id: string; className?: string; children: JSX.Element }) => {
   const isMounted = useContext(MainContext)
 
   return (

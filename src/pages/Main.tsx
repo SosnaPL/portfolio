@@ -32,13 +32,13 @@ export const Main = () => {
           <Section id="about" className="bg-neutral-900">
             <About />
           </Section>
-          <Section id="work" className="flex flex-col">
+          <Section id="work">
             <Work />
           </Section>
-          <Section id="projects" className="flex flex-col bg-neutral-900">
+          <Section id="projects" className="bg-neutral-900">
             <Projects />
           </Section>
-          <Section id="contact" className="flex flex-col relative">
+          <Section id="contact" className="relative">
             <Contact />
           </Section>
         </MainContext.Provider>
