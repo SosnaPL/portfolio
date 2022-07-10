@@ -26,12 +26,12 @@ export const Description = () => {
   return (
     <div ref={ref} className="flex flex-col gap-2 justify-center w-full z-30">
       <CSSTransition in={inView} timeout={1000} mountOnEnter classNames="description">
-        <span className="text-left text-gray-400 font-extrabold text-sm sm:text-lg">
+        <span className="text-left text-gray-400 font-extrabold text-xs sm:text-lg">
           {'WELCOME TO MY WORLD'}
         </span>
       </CSSTransition>
       <CSSTransition in={inView} timeout={1000} mountOnEnter classNames="description">
-        <h1 className="flex flex-col gap-1 text-4xl sm:gap-2 sm:text-5xl md:text-7xl font-black z-50">
+        <h1 className="flex flex-col gap-1 text-3xl sm:gap-2 sm:text-5xl md:text-7xl font-black z-50">
           <span className="z-10">{`Hi, I'm Jacob`}</span>
           <TextTransition
             className="text-blue-500 w-full"
