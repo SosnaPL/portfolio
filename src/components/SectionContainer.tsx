@@ -11,10 +11,8 @@ export const SectionContainer = (props: {
     <div
       className={`flex flex-col flex-1 gap-10 px-0 sm:px-10 md:px-20 xl:px-40 ${props.className}`}
     >
-      <div className="flex gap-4 items-end">
-        <h1 className="flex justify-center md:justify-start text-5xl sm:text-6xl md:text-7xl font-black">
-          {props.title}
-        </h1>
+      <div className="flex gap-4 items-end w-full justify-center md:justify-start">
+        <h1 className="flex text-5xl sm:text-6xl md:text-7xl font-black">{props.title}</h1>
         <Show when={props.icon}>
           <img
             src={props.icon}
