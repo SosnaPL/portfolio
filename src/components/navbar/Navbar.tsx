@@ -16,7 +16,7 @@ export const Navbar = () => {
   return (
     <div
       className={`fixed px-5 md:px-10 py-4 sm:py-5 w-full bg-neutral-900 bg-opacity-0 transition-all duration-200  ${
-        posY > 50 && 'bg-opacity-100 shadow-2xl shadow-black'
+        posY > 50 && 'bg-opacity-100 shadow-xl shadow-black'
       } `}
       style={{ zIndex: 100 }}
     >

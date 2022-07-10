@@ -29,6 +29,10 @@ export const navigationElements: NavbarElementInfo[] = [
   {
     id: 'projects',
     name: 'Projects'
+  },
+  {
+    id: 'contact',
+    name: 'Contact'
   }
 ]
 

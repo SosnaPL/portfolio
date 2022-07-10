@@ -7,6 +7,7 @@ import { Work } from 'components/work/Work'
 import { navigationElements } from 'Constants'
 import { Section } from './../components/Section'
 import { Projects } from './../components/projects/Projects'
+import { Contact } from './../components/contact/Contact'
 
 export const MainContext = createContext(false)
 
@@ -36,6 +37,9 @@ export const Main = () => {
           </Section>
           <Section id="projects" className="flex flex-col bg-neutral-900">
             <Projects />
+          </Section>
+          <Section id="contact" className="flex flex-col">
+            <Contact />
           </Section>
         </MainContext.Provider>
       </ScrollSpy>
