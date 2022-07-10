@@ -135,7 +135,7 @@ export const projectsList: ProjectInfo[] = [
   {
     title: 'Portfolio',
     description:
-      'This website ;). Here you can find my personal projects, my latest work and my latest achievements.',
+      'This website ;). Here you will find my personal projects, a few words about me, my achievements and tedchnologies in which I work.',
     technologies: [html5Icon, css3Icon, typescriptIcon, reactIcon],
     website: 'https://sosna.software/',
     repository: 'https://github.com/SosnaPL/portfolio'
@@ -143,7 +143,7 @@ export const projectsList: ProjectInfo[] = [
   {
     title: 'GenshinApps',
     description:
-      'Damage calculator (with artiffacts simulator in the future) for each individual character in Genshin Impact.',
+      'Damage calculator (with planned artifacts simulator) for each individual character in Genshin Impact.',
     technologies: [html5Icon, css3Icon, typescriptIcon, reactIcon],
     website: 'https://genshin-apps.com/',
     repository: 'https://gitlab.com/SosnaPL/genshinaps'
@@ -164,14 +164,13 @@ export const projectsList: ProjectInfo[] = [
   },
   {
     title: 'Coub Video Creater',
-    description: 'Python Script that allowed to create video compilations using CoubAPI.',
+    description: 'Python script using Coub API to download, convert and concat videos',
     technologies: [pythonIcon],
     repository: 'https://github.com/SosnaPL/Coub-Video-Creator'
   },
   {
     title: 'File Manager',
-    description:
-      'Simple file manager that allows to upload/download/delete files from a raspberry pi.',
+    description: 'File manager with upload/delete/download support connected to a raspberry pi.',
     technologies: [html5Icon, css3Icon, typescriptIcon, reactIcon]
   }
 ]
