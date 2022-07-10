@@ -164,7 +164,7 @@ export const projectsList: ProjectInfo[] = [
   },
   {
     title: 'Coub Video Creater',
-    description: 'Python script using Coub API to download, convert and concat videos',
+    description: 'Python script using Coub API to download, convert and concat videos.',
     technologies: [pythonIcon],
     repository: 'https://github.com/SosnaPL/Coub-Video-Creator'
   },
