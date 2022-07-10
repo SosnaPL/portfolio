@@ -1,6 +1,8 @@
 import { useInView } from 'react-intersection-observer'
+import ReactTooltip from 'react-tooltip'
 import { CSSTransition } from 'react-transition-group'
 
+import infoIconSrc from 'assets/info.svg'
 import { SectionContainer } from 'components/SectionContainer'
 import { projectsList } from 'Constants'
 import 'styles/transitions.scss'
@@ -22,7 +24,16 @@ export function Projects() {
     }[delay])
 
   return (
-    <SectionContainer title="My projects">
+    <SectionContainer title="My projects" icon={infoIconSrc} tooltip="projectInfo">
+      <ReactTooltip
+        id="projectInfo"
+        type="info"
+        effect="solid"
+        className="!w-80 !bg-neutral-800 shadow-xl shadow-black"
+        arrowColor="rgb(38, 38, 38)"
+      >
+        <span className="font-semibold text-neutral-300">{`Projects that you can see below are my personal projects done during the learning period. Each subsequent project will be based on the knowledge I have gained so far, allowing for continuous self-development. Please note that I cannot share commercial projects (NDA), so not all technologies mentioned above will appear in my personal projects.`}</span>
+      </ReactTooltip>
       <div ref={ref} className="flex flex-wrap justify-center gap-6">
         {projectsList.map((project, key) => (
           <CSSTransition
