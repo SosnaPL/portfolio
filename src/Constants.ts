@@ -97,7 +97,7 @@ export const education: EducationInfo[] = [
     name: 'Junior Software Developer',
     source: 'HusariaSolutions',
     href: 'https://www.husariasolutions.com/',
-    date: 'May 2022 - Present'
+    date: 'May 2022 - August 2022'
   }
 ]
 
@@ -145,7 +145,7 @@ export const projectsList: ProjectInfo[] = [
     description:
       'Damage calculator (with planned artifacts simulator) for each individual character in Genshin Impact.',
     technologies: [html5Icon, css3Icon, typescriptIcon, reactIcon],
-    website: 'https://genshin-apps.com/',
+    website: 'https://genshinapps.netlify.app/',
     repository: 'https://gitlab.com/SosnaPL/genshinaps'
   },
   {
