@@ -98,6 +98,12 @@ export const education: EducationInfo[] = [
     source: 'HusariaSolutions',
     href: 'https://www.husariasolutions.com/',
     date: 'May 2022 - August 2022'
+  },
+  {
+    name: 'Front-end Developer',
+    source: 'DBPlus',
+    href: 'https://dbplus.tech/en/',
+    date: 'January 2023 - Present'
   }
 ]
 

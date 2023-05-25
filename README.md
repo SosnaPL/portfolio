@@ -1,1 +1,1 @@
-# portfolio
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2171f316-df4a-46b2-bfeb-ec2fca10ca57/deploy-status)](https://app.netlify.com/sites/jsosinski/deploys)
