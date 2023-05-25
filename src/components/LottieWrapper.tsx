@@ -1,11 +1,11 @@
 import { useLottie } from 'lottie-react'
-import { useEffect } from 'react'
+/* import { useEffect } from 'react' */
 
 import { useInView } from 'react-intersection-observer'
 import { LottieWrapperInfo } from 'types'
 
 const LottieWrapper = (props: LottieWrapperInfo) => {
-  const { ref, inView } = useInView({
+  const { ref /* , inView */ } = useInView({
     threshold: 0
   })
 
@@ -16,9 +16,9 @@ const LottieWrapper = (props: LottieWrapperInfo) => {
     className: props.className
   }
 
-  const { View, play, pause } = useLottie(options as any)
+  const { View /* , play, pause  */ } = useLottie(options as any)
 
-  useEffect(() => {
+  /*   useEffect(() => {
     inView ? play() : pause()
   }, [inView])
 
@@ -29,7 +29,7 @@ const LottieWrapper = (props: LottieWrapperInfo) => {
       window.removeEventListener('blur', pause)
       window.removeEventListener('focus', play)
     }
-  }, [])
+  }, []) */
 
   return (
     <div className="flex justify-center" ref={ref}>
