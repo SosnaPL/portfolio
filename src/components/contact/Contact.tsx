@@ -15,15 +15,15 @@ export const Contact = () => {
             <LottieWrapper lottie={emailLottie} className="w-40 sm:w-60" />
             <a
               className="font-bold text-2xl sm:text-4xl text-neutral-300 hover:text-neutral-400 duration-150"
-              href="mailto: jsosinski99@gmail.com"
+              href="mailto: sosna.software@gmail.com"
             >
-              {'jsosinski99@gmail.com'}
+              {'sosna.software@gmail.com'}
             </a>
           </div>
           <div className="flex flex-col items-center">
             <LottieWrapper lottie={discordLottie} className="w-40 sm:w-60" />
             <span className="font-bold text-2xl sm:text-4xl cursor-pointer text-neutral-300 hover:text-neutral-400 duration-150">
-              {'Sosna#3448'}
+              {'Sosna'}
             </span>
           </div>
         </div>

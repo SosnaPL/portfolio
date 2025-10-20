@@ -103,7 +103,7 @@ export const education: EducationInfo[] = [
     name: 'Front-end Developer',
     source: 'DBPlus',
     href: 'https://dbplus.tech/en/',
-    date: 'January 2023 - Present'
+    date: 'January 2023 - November 2023'
   }
 ]
 
