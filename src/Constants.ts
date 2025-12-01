@@ -104,6 +104,10 @@ export const education: EducationInfo[] = [
     source: 'DBPlus',
     href: 'https://dbplus.tech/en/',
     date: 'January 2023 - November 2023'
+  },
+  {
+    name: 'Freelance',
+    date: 'November 2023 - Now'
   }
 ]
 
