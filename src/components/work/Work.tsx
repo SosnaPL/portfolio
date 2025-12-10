@@ -3,6 +3,8 @@ import { githubList, progressCircles } from 'Constants'
 import GithubCalendar from './GithubCalendar'
 import ProgressCircle from './ProgressCircle'
 import Technologies from './Technologies'
+import LottieWrapper from 'components/LottieWrapper'
+import workLottie from 'assets/work.json'
 
 export const Work = () => {
   return (
@@ -13,7 +15,9 @@ export const Work = () => {
         ))}
       </div>
       <div className="flex flex-col xl:flex-row gap-y-6 justify-center items-center flex-grow">
-        <div className="flex flex-col items-center justify-between gap-10 w-full xl:w-1/2">
+        <LottieWrapper lottie={workLottie} className="w-80 sm:w-full" />
+
+        {/* <div className="flex flex-col items-center justify-between gap-10 w-full xl:w-1/2">
           {githubList.map((github) => (
             <div
               key={github.title}
@@ -25,7 +29,7 @@ export const Work = () => {
               <GithubCalendar username={github.username} />
             </div>
           ))}
-        </div>
+        </div> */}
         <div className="technologies flex relative w-full md:w-1/2 justify-center items-center">
           <Technologies />
         </div>
