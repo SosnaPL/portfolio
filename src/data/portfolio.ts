@@ -1,0 +1,98 @@
+import type { ExperienceItem, Project } from './portfolio.types'
+
+export const skills = [
+  'React',
+  'Svelte',
+  'SolidJS',
+  'React Native',
+  'TypeScript',
+  'JavaScript',
+  'Python',
+  'Webpack',
+  'Vite',
+  'Git',
+  'CSS3',
+  'Sass',
+  'Tailwind',
+  'HTML5'
+]
+
+export const projects: Project[] = [
+  {
+    name: 'GenshinApps',
+    description:
+      'A character damage calculator for Genshin Impact, with an artifact build simulator planned.',
+    stack: ['React', 'TypeScript'],
+    image: '/projects/genshinapps.png',
+    imageAlt: 'Paimon from Genshin Impact holding a sign',
+    site: 'https://genshinapps.netlify.app/',
+    repo: 'https://gitlab.com/SosnaPL/genshinaps'
+  },
+  {
+    name: 'MSTAG',
+    description:
+      'A tank artillery game featuring custom chat, notifications, parties, and friend systems. No longer maintained.',
+    stack: ['Python', 'Django'],
+    image: '/projects/mstag.jpg',
+    imageAlt: 'Tanks in a dark forest, used as the MSTAG game background',
+    site: 'https://mstag.netlify.app/',
+    repo: 'https://github.com/SosnaPL/MSTAG-Front-End'
+  },
+  {
+    name: 'Chess VR',
+    description:
+      'A cross-platform chess game designed to play in a browser or in virtual reality.',
+    stack: ['React', 'TypeScript'],
+    image: '/projects/chess-vr.png',
+    imageAlt: 'Chessboard with a full set of pieces in a blue and white design',
+    repo: 'https://gitlab.com/SosnaPL/chessvr'
+  },
+  {
+    name: 'Coub Video Creator',
+    description:
+      'A Python utility that uses the Coub API to download, convert, and combine videos.',
+    stack: ['Python'],
+    image: '/projects/coub-video-creator.png',
+    imageAlt: 'Blue video player icon for the Coub Video Creator project',
+    repo: 'https://github.com/SosnaPL/Coub-Video-Creator'
+  },
+  {
+    name: 'Portfolio',
+    description:
+      'A personal portfolio highlighting selected projects, experience, and the technologies I use.',
+    stack: ['React', 'TypeScript'],
+    site: 'https://sosna.software/',
+    repo: 'https://github.com/SosnaPL/portfolio'
+  },
+  {
+    name: 'File Manager',
+    description:
+      'A web-based file manager for a Raspberry Pi, with file upload, download, and deletion.',
+    stack: ['React', 'TypeScript'],
+    image: '/projects/file-manager.png',
+    imageAlt: 'Blue file folder with a document and orange list lines'
+  }
+]
+
+export const experience: ExperienceItem[] = [
+  {
+    role: 'Freelance',
+    company: 'Independent',
+    dates: 'Nov 2023 - Present',
+    description:
+      'Building responsive web applications and bringing ideas from concept to production.'
+  },
+  {
+    role: 'Front-end Developer',
+    company: 'DBPlus',
+    dates: 'Jan 2023 - Nov 2023',
+    description: 'Developing documentation and application for database monitoring with support for MSSQL, PostgreSQL, Oracle and SAP HANA.'
+  },
+  {
+    role: 'Junior Software Developer',
+    company: 'HusariaSolutions',
+    dates: 'May 2022 - Aug 2022',
+    description:
+      `Striving for the best code quality and performance of responsive applications. Self-organization with flexible working hours. Working with multilingual projects (i18n) in frameworks such as SolidJS/Svelte using REST API/STRAPI. Task oriented system with PR's/code reviews. `
+  }
+]

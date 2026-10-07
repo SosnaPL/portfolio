@@ -1,0 +1,12 @@
+@import 'tailwindcss';
+@config '../tailwind.config.js';
+
+:root {
+  --color-paper: 8 8 8;
+  --color-ink: 236 231 231;
+  --color-muted: 163 163 163;
+  --color-soft: 197 197 197;
+  --color-accent: 56 189 248;
+  --color-line: 38 38 38;
+  --color-panel: 23 23 23;
+}
