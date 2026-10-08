@@ -21,9 +21,9 @@ export default function Footer() {
   return (
     <>
       <footer className="border-t border-line">
-        <div className="relative mx-auto flex max-w-7xl flex-col gap-3 px-6 py-7 text-xs text-muted sm:flex-row sm:items-center sm:justify-between">
+        <div className="relative mx-auto flex max-w-7xl flex-row items-center justify-between gap-3 px-6 py-7 text-xs text-muted">
           <b className="font-display text-ink">JS.</b>
-          <span className="text-center sm:absolute sm:left-1/2 sm:-translate-x-1/2">
+          <span className="absolute left-1/2 -translate-x-1/2 text-center">
             © {new Date().getFullYear()} Jakub Sosiński. All rights reserved.
           </span>
         </div>
