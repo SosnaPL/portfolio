@@ -9,7 +9,7 @@ export default function Experience() {
     >
       <Reveal className="grid gap-12 lg:grid-cols-[.7fr_1.3fr]">
         <div>
-          <p className="font-mono text-[10px] font-medium tracking-[.16em] text-muted">02 - EXPERIENCE &amp; EDUCATION</p>
+          <p className="font-mono text-[10px] font-medium tracking-[.16em] text-forest">02 - EXPERIENCE &amp; EDUCATION</p>
           <h2 className="mt-5 font-display text-[clamp(2.8rem,5.5vw,4.7rem)] font-semibold leading-[.99] tracking-[-.07em]">
             Experience
             <br />

@@ -8,10 +8,16 @@ import Reveal from '@/components/ui/reveal/Reveal'
 
 export default function Home() {
   return (
-    <section id="home" className="relative isolate flex min-h-screen w-full items-center overflow-hidden px-6 pb-12 pt-28">
+    <section
+      id="home"
+      className="relative isolate flex min-h-screen w-full items-center overflow-hidden px-6 pb-12 pt-28"
+    >
       <ParticleBackground />
 
-      <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden opacity-55 sm:opacity-100" aria-hidden="true">
+      <div
+        className="pointer-events-none absolute inset-0 z-0 overflow-hidden opacity-55 sm:opacity-100"
+        aria-hidden="true"
+      >
         <div className="ml-auto h-full w-[78%] max-[767px]:w-full max-[767px]:translate-x-[4vw]">
           <LottieWrapper lottie={codingAnimation} className="h-full w-full" />
         </div>
@@ -29,12 +35,12 @@ export default function Home() {
           <br />
           <span className="text-forest tracking-[-.02em]">interfaces,</span>
           <br />
-          built for people.
+          built with purpose.
         </h1>
 
         <p className="mt-8 max-w-lg text-lg leading-8 text-muted">
-          I&apos;m Jakub, a front-end developer turning ideas into clear,
-          responsive web applications with React and TypeScript.
+          I&apos;m Jakub, a front-end developer turning ideas into clear, responsive web
+          applications with React and TypeScript.
         </p>
 
         <div className="mt-8 flex flex-wrap items-center gap-5">
@@ -50,14 +56,32 @@ export default function Home() {
           </a>
         </div>
 
-        <div className="mt-10 flex items-center gap-3">
-          <a className="grid size-13.5 place-items-center overflow-hidden rounded-full transition-colors hover:text-forest" href="https://github.com/SosnaPL" target="_blank" rel="noreferrer" aria-label="GitHub">
+        <div className="mt-10 flex items-center gap-3justify-start">
+          <a
+            className="grid size-13.5 place-items-center overflow-hidden rounded-full transition-colors hover:text-forest"
+            href="https://github.com/SosnaPL"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="GitHub"
+          >
             <LottieWrapper lottie={githubAnimation} className="size-10.5" label="GitHub" />
           </a>
-          <a className="grid size-13.5 place-items-center overflow-hidden rounded-full transition-colors hover:text-forest" href="https://gitlab.com/SosnaPL" target="_blank" rel="noreferrer" aria-label="GitLab">
+          <a
+            className="grid size-13.5 place-items-center overflow-hidden rounded-full transition-colors hover:text-forest"
+            href="https://gitlab.com/SosnaPL"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="GitLab"
+          >
             <img src="/gitlab.svg" alt="" className="size-8" />
           </a>
-          <a className="grid size-13.5 place-items-center overflow-hidden rounded-full transition-colors hover:text-forest" href="https://www.linkedin.com/in/jakub-sosi%C5%84ski-954a7a19b/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+          <a
+            className="grid size-13.5 place-items-center overflow-hidden rounded-full transition-colors hover:text-forest"
+            href="https://www.linkedin.com/in/jakub-sosi%C5%84ski-954a7a19b/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="LinkedIn"
+          >
             <LottieWrapper lottie={linkedinAnimation} className="size-10.5" label="LinkedIn" />
           </a>
         </div>

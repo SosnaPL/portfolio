@@ -1,4 +1,4 @@
-import { ArrowUpRight, Code2 } from 'lucide-react'
+import { Code2, Globe2 } from 'lucide-react'
 import type { ProjectProps } from './Project.types'
 
 export default function Project({ project }: ProjectProps) {
@@ -18,26 +18,24 @@ export default function Project({ project }: ProjectProps) {
           <div className="flex shrink-0 gap-2">
             {project.repo && (
               <a
-                className="flex items-center justify-center gap-1.5 whitespace-nowrap rounded-full border border-line px-3 py-2 text-[11px] text-muted transition-colors hover:border-forest hover:text-forest"
+                className="grid size-9 place-items-center rounded-full border border-line text-muted transition-colors hover:border-forest hover:text-forest"
                 href={project.repo}
                 target="_blank"
                 rel="noreferrer"
                 aria-label={`${project.name} source code`}
               >
-                <Code2 size={14} aria-hidden="true" />
-                Source
+                <Code2 size={16} aria-hidden="true" />
               </a>
             )}
             {project.site && (
               <a
-                className="flex items-center justify-center gap-1.5 whitespace-nowrap rounded-full border border-line px-3 py-2 text-[11px] text-muted transition-colors hover:border-forest hover:text-forest"
+                className="grid size-9 place-items-center rounded-full border border-line text-muted transition-colors hover:border-forest hover:text-forest"
                 href={project.site}
                 target="_blank"
                 rel="noreferrer"
                 aria-label={`${project.name} live site`}
               >
-                <ArrowUpRight size={14} aria-hidden="true" />
-                Live site
+                <Globe2 size={16} aria-hidden="true" />
               </a>
             )}
           </div>
