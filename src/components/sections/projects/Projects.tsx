@@ -23,10 +23,10 @@ export default function Projects() {
           </p>
         </Reveal>
 
-        <div className="grid gap-5 md:grid-cols-2">
+        <div className="grid auto-rows-fr gap-5 md:grid-cols-2">
           {projects.map((project, index) => (
-            <Reveal key={project.name} delayMs={index * 90}>
-              <Project project={project} index={index} />
+            <Reveal key={project.name} delayMs={index * 90} className="h-full">
+              <Project project={project} />
             </Reveal>
           ))}
         </div>

@@ -1,32 +1,10 @@
-import { ArrowUpRight, Code2, FolderCode } from 'lucide-react'
+import { ArrowUpRight, Code2 } from 'lucide-react'
 import type { ProjectProps } from './Project.types'
 
-export default function Project({ project, index }: ProjectProps) {
+export default function Project({ project }: ProjectProps) {
   return (
-    <article className="overflow-hidden rounded-3xl border border-line bg-paper transition duration-200 hover:-translate-y-1 hover:border-forest/50">
-      <div className="relative flex aspect-[1.75] items-center justify-center overflow-hidden bg-panel bg-[radial-gradient(ellipse_at_50%_20%,rgb(var(--color-accent)/0.08),transparent_60%)]">
-        {project.image ? (
-          <img
-            src={project.image}
-            alt={project.imageAlt ?? `${project.name} project preview`}
-            loading="lazy"
-            className="absolute inset-0 size-full object-cover"
-          />
-        ) : (
-          <FolderCode className="text-forest/70" size={58} />
-        )}
-        {project.image && (
-          <div
-            className="absolute inset-0 bg-linear-to-t from-paper/70 via-paper/10 to-paper/20"
-            aria-hidden="true"
-          />
-        )}
-        <span className="absolute left-6 top-5 font-mono text-[10px] text-muted">
-          PROJECT / {String(index + 1).padStart(2, '0')}
-        </span>
-      </div>
-
-      <div className="p-6">
+    <article className="h-full overflow-hidden rounded-3xl border border-line bg-paper transition duration-200 hover:-translate-y-1 hover:border-forest/50">
+      <div className="flex h-full flex-col p-6">
         <div className="flex justify-between gap-4">
           <div>
             <p className="font-mono text-[10px] font-medium tracking-[.16em] text-forest">
@@ -65,7 +43,7 @@ export default function Project({ project, index }: ProjectProps) {
           </div>
         </div>
 
-        <p className="mt-4 text-sm leading-6 text-muted">
+        <p className="mt-4 flex-1 text-sm leading-6 text-muted">
           {project.description}
         </p>
 

@@ -23,8 +23,6 @@ export const projects: Project[] = [
     description:
       'A character damage calculator for Genshin Impact, with an artifact build simulator planned.',
     stack: ['React', 'TypeScript'],
-    image: '/projects/genshinapps.png',
-    imageAlt: 'Paimon from Genshin Impact holding a sign',
     site: 'https://genshinapps.netlify.app/',
     repo: 'https://gitlab.com/SosnaPL/genshinaps'
   },
@@ -33,8 +31,6 @@ export const projects: Project[] = [
     description:
       'A tank artillery game featuring custom chat, notifications, parties, and friend systems. No longer maintained.',
     stack: ['Python', 'Django'],
-    image: '/projects/mstag.jpg',
-    imageAlt: 'Tanks in a dark forest, used as the MSTAG game background',
     site: 'https://mstag.netlify.app/',
     repo: 'https://github.com/SosnaPL/MSTAG-Front-End'
   },
@@ -43,8 +39,6 @@ export const projects: Project[] = [
     description:
       'A cross-platform chess game designed to play in a browser or in virtual reality.',
     stack: ['React', 'TypeScript'],
-    image: '/projects/chess-vr.png',
-    imageAlt: 'Chessboard with a full set of pieces in a blue and white design',
     repo: 'https://gitlab.com/SosnaPL/chessvr'
   },
   {
@@ -52,8 +46,6 @@ export const projects: Project[] = [
     description:
       'A Python utility that uses the Coub API to download, convert, and combine videos.',
     stack: ['Python'],
-    image: '/projects/coub-video-creator.png',
-    imageAlt: 'Blue video player icon for the Coub Video Creator project',
     repo: 'https://github.com/SosnaPL/Coub-Video-Creator'
   },
   {
@@ -68,9 +60,7 @@ export const projects: Project[] = [
     name: 'File Manager',
     description:
       'A web-based file manager for a Raspberry Pi, with file upload, download, and deletion.',
-    stack: ['React', 'TypeScript'],
-    image: '/projects/file-manager.png',
-    imageAlt: 'Blue file folder with a document and orange list lines'
+    stack: ['React', 'TypeScript']
   }
 ]
 
