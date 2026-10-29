@@ -1,10 +1,12 @@
+import { lazy, Suspense } from 'react'
 import { Mail } from 'lucide-react'
-import codingAnimation from '@/assets/coding.json'
 import githubAnimation from '@/assets/github.json'
 import linkedinAnimation from '@/assets/linkedin.json'
-import ParticleBackground from '@/components/ui/particlebackground/ParticleBackground'
 import LottieWrapper from '@/components/ui/lottiewrapper/LottieWrapper'
 import Reveal from '@/components/ui/reveal/Reveal'
+
+const CodingIllustration = lazy(() => import('./CodingIllustration'))
+const ParticleBackground = lazy(() => import('@/components/ui/particlebackground/ParticleBackground'))
 
 export default function Home() {
   return (
@@ -12,14 +14,18 @@ export default function Home() {
       id="home"
       className="relative isolate flex min-h-screen w-full items-center overflow-hidden px-6 pb-12 pt-28"
     >
-      <ParticleBackground />
+      <Suspense fallback={null}>
+        <ParticleBackground />
+      </Suspense>
 
       <div
         className="pointer-events-none absolute inset-0 z-0 overflow-hidden opacity-55 sm:opacity-100"
         aria-hidden="true"
       >
         <div className="ml-auto h-full w-[78%] max-[767px]:w-full max-[767px]:translate-x-[4vw]">
-          <LottieWrapper lottie={codingAnimation} className="h-full w-full" />
+          <Suspense fallback={null}>
+            <CodingIllustration />
+          </Suspense>
         </div>
         <div className="absolute inset-0 bg-linear-to-r from-paper via-paper/90 to-paper/30 max-[767px]:from-paper/85 max-[767px]:via-paper/60 max-[767px]:to-paper/25" />
         <div className="absolute inset-0 bg-linear-to-t from-paper/40 to-transparent" />
